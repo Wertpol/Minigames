@@ -26,6 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>// init state variables
+num_controllers = gamepad_get_device_count();
+
 for (var i = 0; i &lt; num_controllers; i++) {
     stick_left_pressed[i] = false;
     stick_right_pressed[i] = false;
@@ -101,7 +103,7 @@ for (var i = 0; i &lt; num_controllers; i++) {
           <argument>
             <kind>1</kind>
             <string>// check for changes in state
-for (var i=0; i&lt;num_controllers; i++) {
+for (var i = 0; i &lt; num_controllers; i++) {
     // left pressed
     if (!stick_left_held[i] &amp;&amp; gamepad_axis_value(i,gp_axislh) &lt;= -threshold) {
         stick_left_held[i] = true;
@@ -169,11 +171,44 @@ for (var i=0; i&lt;num_controllers; i++) {
     }
 }
 if (player == 1) {
-    p1LeftPressed = keyboard_check_pressed(ord'A') || gamepad_button_check_pressed(0,gp_padl) || stick_left_pressed[0];
-}
-
-if (player == 2) {
+    leftPressed = keyboard_check_pressed(global.p1Left) || gamepad_button_check_pressed(0,gp_padl) || stick_left_pressed[0];
+    rightPressed = keyboard_check_pressed(global.p1Right) || gamepad_button_check_pressed(0,gp_padr) || stick_right_pressed[0];
+    upPressed = keyboard_check_pressed(global.p1Up) || gamepad_button_check_pressed(0,gp_padu) || stick_up_pressed[0];
+    downPressed = keyboard_check_pressed(global.p1Down) || gamepad_button_check_pressed(0,gp_padd) || stick_down_pressed[0];
     
+    left = keyboard_check(global.p1Left) || gamepad_button_check(0,gp_padl) || stick_left_held[0];
+    right = keyboard_check(global.p1Right) || gamepad_button_check(0,gp_padr) || stick_right_held[0];
+    up = keyboard_check(global.p1Up) || gamepad_button_check(0,gp_padu) || stick_up_held[0];
+    down = keyboard_check(global.p1Down) || gamepad_button_check(0,gp_padd) || stick_down_held[0];
+    
+    leftReleased = keyboard_check_released(global.p1Left) || gamepad_button_check_released(0,gp_padl) || stick_left_released[0];
+    rightReleased = keyboard_check_released(global.p1Right) || gamepad_button_check_released(0,gp_padr) || stick_right_released[0];
+    upReleased = keyboard_check_released(global.p1Up) || gamepad_button_check_released(0,gp_padu) || stick_up_released[0];
+    downReleased = keyboard_check_released(global.p1Down) || gamepad_button_check_released(0,gp_padd) || stick_down_released[0];
+    
+    actionPressed = keyboard_check_pressed(global.p1Action) || gamepad_button_check_pressed(0,gp_face1) || gamepad_button_check_pressed(0,gp_face2) || gamepad_button_check_pressed(0,gp_face3) || gamepad_button_check_pressed(0,gp_face4);
+    action = keyboard_check(global.p1Action) || gamepad_button_check(0,gp_face1) || gamepad_button_check(0,gp_face2) || gamepad_button_check(0,gp_face3) || gamepad_button_check(0,gp_face4);
+    actionReleased = keyboard_check_released(global.p1Action) || gamepad_button_check_released(0,gp_face1) || gamepad_button_check_released(0,gp_face2) || gamepad_button_check_released(0,gp_face3) || gamepad_button_check_released(0,gp_face4);
+}
+if (player == 2) {
+    leftPressed = keyboard_check_pressed(global.p2Left) || gamepad_button_check_pressed(1,gp_padl) || stick_left_pressed[1];
+    rightPressed = keyboard_check_pressed(global.p2Right) || gamepad_button_check_pressed(1,gp_padr) || stick_right_pressed[1];
+    upPressed = keyboard_check_pressed(global.p2Up) || gamepad_button_check_pressed(1,gp_padu) || stick_up_pressed[1];
+    downPressed = keyboard_check_pressed(global.p2Down) || gamepad_button_check_pressed(1,gp_padd) || stick_down_pressed[1];
+    
+    left = keyboard_check(global.p2Left) || gamepad_button_check(1,gp_padl) || stick_left_held[1];
+    right = keyboard_check(global.p2Right) || gamepad_button_check(1,gp_padr) || stick_right_held[1];
+    up = keyboard_check(global.p2Up) || gamepad_button_check(1,gp_padu) || stick_up_held[1];
+    down = keyboard_check(global.p2Down) || gamepad_button_check(1,gp_padd) || stick_down_held[1];
+    
+    leftReleased = keyboard_check_released(global.p2Left) || gamepad_button_check_released(1,gp_padl) || stick_left_released[1];
+    rightReleased = keyboard_check_released(global.p2Right) || gamepad_button_check_released(1,gp_padr) || stick_right_released[1];
+    upReleased = keyboard_check_released(global.p2Up) || gamepad_button_check_released(1,gp_padu) || stick_up_released[1];
+    downReleased = keyboard_check_released(global.p2Down) || gamepad_button_check_released(1,gp_padd) || stick_down_released[1];
+    
+    actionPressed = keyboard_check_pressed(global.p2Action) || gamepad_button_check_pressed(1,gp_face1) || gamepad_button_check_pressed(1,gp_face2) || gamepad_button_check_pressed(1,gp_face3) || gamepad_button_check_pressed(1,gp_face4);
+    action = keyboard_check(global.p2Action) || gamepad_button_check(1,gp_face1) || gamepad_button_check(1,gp_face2) || gamepad_button_check(1,gp_face3) || gamepad_button_check(1,gp_face4);
+    actionReleased = keyboard_check_released(global.p2Action) || gamepad_button_check_released(1,gp_face1) || gamepad_button_check_released(1,gp_face2) || gamepad_button_check_released(1,gp_face3) || gamepad_button_check_released(1,gp_face4);
 }
 </string>
           </argument>

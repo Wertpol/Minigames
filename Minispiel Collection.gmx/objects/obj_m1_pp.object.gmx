@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>movespeed = 4;
+            <string>event_inherited();
+
+movespeed = 4;
 </string>
           </argument>
         </arguments>
@@ -48,12 +50,18 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>xmove = keyboard_check(right) - keyboard_check(left);
+            <string>event_inherited();
+
+xmove = right - left;
 
 x += xmove * movespeed;
 
-gravity = 0.5;
-gravity_direction = 270;
+if (action) {
+    y -= 2;
+}
+
+//gravity = 0.5;
+//gravity_direction = 270;
 </string>
           </argument>
         </arguments>

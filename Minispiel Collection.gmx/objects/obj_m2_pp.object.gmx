@@ -27,6 +27,8 @@
             <kind>1</kind>
             <string>event_inherited();
 
+hsp = 0;
+vsp = 0;
 image_angle = irandom_range(0,360);
 </string>
           </argument>
@@ -52,7 +54,28 @@ image_angle = irandom_range(0,360);
             <kind>1</kind>
             <string>event_inherited();
 
-motion_set(image_angle, 2)
+//continues movement
+motion_set(image_angle, 2);
+
+//Horizontal Collision
+if (place_meeting(x+hsp,y,obj_m2_wall)) {
+    while(!place_meeting(x+sign(hsp),y,obj_m1_wall)) {
+        x += sign(hsp);
+    }
+    hsp = 0;
+}
+x += hsp;
+
+//Vertical Collision
+if (place_meeting(x,y+vsp,obj_m2_wall))
+{
+    while(!place_meeting(x,y+sign(vsp),obj_m1_wall))
+    {
+        y += sign(vsp);
+    }
+    vsp = 0;
+}
+y += vsp;
 </string>
           </argument>
         </arguments>

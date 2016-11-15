@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>instance_create(random(room_width),random(room_height),obj_m2_p1);
 instance_create(random(room_width),random(room_height),obj_m2_p2);
+instance_create(obj_m2_p1,obj_m2_p1,obj_m2_p1_tail);
 </string>
           </argument>
         </arguments>

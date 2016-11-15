@@ -31,7 +31,7 @@
     <yoffset>0</yoffset>
   </makerSettings>
   <backgrounds>
-    <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
+    <background visible="-1" foreground="0" name="bac_m2" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -52,10 +52,10 @@
   </views>
   <instances>
     <instance objName="obj_m2_controller" x="0" y="0" name="inst_49044180" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_m2_wall" x="-32" y="-32" name="inst_F2A2225B" locked="0" code="" scaleX="2" scaleY="36" colour="4294967295" rotation="0"/>
-    <instance objName="obj_m2_wall" x="32" y="1056" name="inst_40CBA1D5" locked="0" code="" scaleX="58.8387107849121" scaleY="2" colour="4294967295" rotation="0"/>
-    <instance objName="obj_m2_wall" x="1952" y="-32" name="inst_0D8B802D" locked="0" code="" scaleX="-2.06451606750488" scaleY="36" colour="4294967295" rotation="0"/>
-    <instance objName="obj_m2_wall" x="0" y="-32" name="inst_06917779" locked="0" code="" scaleX="60" scaleY="2" colour="4294967295" rotation="0"/>
+    <instance objName="obj_m2_wall" x="-32" y="-64" name="inst_40ACE1D2" locked="0" code="" scaleX="2" scaleY="36" colour="4294967295" rotation="0"/>
+    <instance objName="obj_m2_wall" x="32" y="1056" name="inst_07739B97" locked="0" code="" scaleX="61" scaleY="2" colour="4294967295" rotation="0"/>
+    <instance objName="obj_m2_wall" x="1888" y="-64" name="inst_7325F7D8" locked="0" code="" scaleX="3.09677410125732" scaleY="36.1290321350098" colour="4294967295" rotation="0"/>
+    <instance objName="obj_m2_wall" x="32" y="-64" name="inst_77AF3DA1" locked="0" code="" scaleX="58" scaleY="3.09677410125732" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

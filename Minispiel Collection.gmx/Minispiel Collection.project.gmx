@@ -19,10 +19,13 @@
       <sprite>sprites\spr_menu_m2</sprite>
       <sprite>sprites\spr_m2_p1</sprite>
       <sprite>sprites\spr_m2_p2</sprite>
+      <sprite>sprites\spr_m2_p1_tail</sprite>
+      <sprite>sprites\spr_m2_p2_tail</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bac_m1</background>
+    <background>background\bac_m2</background>
   </backgrounds>
   <paths name="paths"/>
   <objects name="objects">
@@ -45,6 +48,8 @@
       <object>objects\obj_m2_p2</object>
       <object>objects\obj_m2_wall</object>
       <object>objects\obj_m2_controller</object>
+      <object>objects\obj_m2_p1_tail</object>
+      <object>objects\obj_m2_p2_tail</object>
     </objects>
   </objects>
   <rooms name="rooms">

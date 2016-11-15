@@ -11,6 +11,9 @@
       <sprite>sprites\spr_menu_start</sprite>
       <sprite>sprites\spr_m1_p1</sprite>
       <sprite>sprites\spr_m1_p2</sprite>
+      <sprite>sprites\spr_m1_boi</sprite>
+      <sprite>sprites\spr_m1_kind</sprite>
+      <sprite>sprites\spr_m1_kind_kapot</sprite>
     </sprites>
     <sprites name="grp_m2">
       <sprite>sprites\spr_menu_m2</sprite>
@@ -18,7 +21,9 @@
       <sprite>sprites\spr_m2_p2</sprite>
     </sprites>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\bac_m1</background>
+  </backgrounds>
   <paths name="paths"/>
   <objects name="objects">
     <object>objects\obj_controller</object>
@@ -29,6 +34,8 @@
       <object>objects\obj_m1_pp</object>
       <object>objects\obj_m1_p1</object>
       <object>objects\obj_m1_p2</object>
+      <object>objects\obj_m1_boi</object>
+      <object>objects\obj_m1_kind</object>
       <object>objects\obj_m1_controller</object>
       <object>objects\obj_m1_wall</object>
     </objects>

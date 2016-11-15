@@ -43,6 +43,7 @@
       <object>objects\obj_m2_pp</object>
       <object>objects\obj_m2_p1</object>
       <object>objects\obj_m2_p2</object>
+      <object>objects\obj_m2_wall</object>
       <object>objects\obj_m2_controller</object>
     </objects>
   </objects>

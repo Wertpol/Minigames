@@ -27,11 +27,11 @@
             <kind>1</kind>
             <string>event_inherited();
 
-movespeed = 4;
-grav = 0.2;
+movespeed = 12;
+grav = 1;
 hsp = 0;
 vsp = 0;
-jump = 7;
+jump = 30;
 </string>
           </argument>
         </arguments>
@@ -59,7 +59,7 @@ jump = 7;
 //React to inputs
 move = right - left;
 hsp = move * movespeed;
-if (vsp &lt; 10) {
+if (vsp &lt; 30) {
     vsp += grav;
 }
 

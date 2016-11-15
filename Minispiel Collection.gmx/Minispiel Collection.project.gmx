@@ -7,15 +7,19 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\spr_menu_start</sprite>
+    <sprite>sprites\spr_menu_m2</sprite>
     <sprite>sprites\spr_m1_p1</sprite>
     <sprite>sprites\spr_m1_p2</sprite>
     <sprite>sprites\spr_wall</sprite>
+    <sprite>sprites\spr_m2_p1</sprite>
+    <sprite>sprites\spr_m2_p2</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <objects name="objects">
     <object>objects\obj_controller</object>
     <object>objects\obj_start</object>
+    <object>objects\obj_start_m2</object>
     <object>objects\obj_mp</object>
     <objects name="grp_m1">
       <object>objects\obj_m1_pp</object>
@@ -24,10 +28,17 @@
       <object>objects\obj_m1_controller</object>
       <object>objects\obj_m1_wall</object>
     </objects>
+    <objects name="grp_m2">
+      <object>objects\obj_m2_pp</object>
+      <object>objects\obj_m2_p1</object>
+      <object>objects\obj_m2_p2</object>
+      <object>objects\obj_m2_controller</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rom_menu</room>
     <room>rooms\rom_m1</room>
+    <room>rooms\rom_m2</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

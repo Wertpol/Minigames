@@ -9,6 +9,7 @@
     <sprite>sprites\spr_menu_start</sprite>
     <sprite>sprites\spr_m1_p1</sprite>
     <sprite>sprites\spr_m1_p2</sprite>
+    <sprite>sprites\spr_wall</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -21,6 +22,7 @@
       <object>objects\obj_m1_p1</object>
       <object>objects\obj_m1_p2</object>
       <object>objects\obj_m1_controller</object>
+      <object>objects\obj_m1_wall</object>
     </objects>
   </objects>
   <rooms name="rooms">

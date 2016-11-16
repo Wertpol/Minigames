@@ -28,7 +28,9 @@
             <string>event_inherited();
 
 frames = 3;
-count = 1;
+frameCount = 1;
+randomCount = 0;
+randomCount2 = 50;
 spd = 5;
 turnspeed = 3;
 image_angle = irandom_range(0,360);
@@ -86,22 +88,43 @@ if(y &lt; - 16){
 }
 
 //Spawn tail
+randomCount++;
+randomCount2++;
 
-count++;
+frameCount++;
 
-if(count &gt; frames){
+if(frameCount &gt; frames){
     count = 1;
 }
 
-if(count == frames){
+if(frameCount == frames){
     if (player == 1) {
-        instance_create(x,y,obj_m2_p1_tail);
-    } else {
-        instance_create(x,y,obj_m2_p2_tail);
+        if(randomCount &lt; 230){
+            tail = instance_create(x,y,obj_m2_p1_tail);
+            with tail{
+                image_angle = other.image_angle;   
+            }
+        }
+    }else{
+        if(randomCount2 &lt; 230){
+            tail = instance_create(x,y,obj_m2_p2_tail);
+            with tail{
+                image_angle = other.image_angle;   
+            }
+        }
     }
+    frameCount = 1;    
 }
 
-//warum haben wir die sarah ins team genommen wenn sie keine ginger mag??
+
+if(randomCount == 250){
+    randomCount = irandom_range(0,150);
+}
+
+if(randomCount2 == 250){
+    randomCount2 = irandom_range(0,150);
+}
+
 </string>
           </argument>
         </arguments>

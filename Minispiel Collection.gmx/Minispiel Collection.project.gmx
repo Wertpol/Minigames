@@ -48,6 +48,7 @@
       <object>objects\obj_m2_p2</object>
       <object>objects\obj_m2_wall</object>
       <object>objects\obj_m2_controller</object>
+      <object>objects\obj_m2_tailp</object>
       <object>objects\obj_m2_p1_tail</object>
       <object>objects\obj_m2_p2_tail</object>
     </objects>

@@ -7,6 +7,7 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\spr_wall</sprite>
+    <sprite>sprites\spr_startall</sprite>
     <sprites name="grp_m1">
       <sprite>sprites\spr_menu_start</sprite>
       <sprite>sprites\spr_m1_p1</sprite>
@@ -14,6 +15,8 @@
       <sprite>sprites\spr_m1_boi</sprite>
       <sprite>sprites\spr_m1_kind</sprite>
       <sprite>sprites\spr_m1_kind_kapot</sprite>
+      <sprite>sprites\spr_m1_fence</sprite>
+      <sprite>sprites\spr_m1_snow</sprite>
     </sprites>
     <sprites name="grp_m2">
       <sprite>sprites\spr_menu_m2</sprite>
@@ -22,8 +25,16 @@
       <sprite>sprites\spr_m2_p1_tail</sprite>
       <sprite>sprites\spr_m2_p2_tail</sprite>
     </sprites>
+    <sprites name="grp_board">
+      <sprite>sprites\spr_board_p1</sprite>
+      <sprite>sprites\spr_board_p2</sprite>
+      <sprite>sprites\spr_board_table</sprite>
+      <sprite>sprites\spr_board_ghost</sprite>
+      <sprite>sprites\spr_board_planchette</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
+    <background>background\bac_board</background>
     <background>background\bac_m1</background>
     <background>background\bac_m2</background>
   </backgrounds>
@@ -32,6 +43,7 @@
     <object>objects\obj_controller</object>
     <object>objects\obj_start</object>
     <object>objects\obj_start_m2</object>
+    <object>objects\obj_startall</object>
     <object>objects\obj_mp</object>
     <objects name="grp_m1">
       <object>objects\obj_m1_pp</object>
@@ -41,6 +53,7 @@
       <object>objects\obj_m1_kind</object>
       <object>objects\obj_m1_controller</object>
       <object>objects\obj_m1_wall</object>
+      <object>objects\obj_m1_fence</object>
     </objects>
     <objects name="grp_m2">
       <object>objects\obj_m2_pp</object>
@@ -52,9 +65,21 @@
       <object>objects\obj_m2_p1_tail</object>
       <object>objects\obj_m2_p2_tail</object>
     </objects>
+    <objects name="grp_board">
+      <object>objects\obj_board_p1</object>
+      <object>objects\obj_board_p2</object>
+      <object>objects\obj_board_table</object>
+      <object>objects\obj_board_ghost</object>
+      <object>objects\obj_board_controller</object>
+      <object>objects\obj_board_planchette</object>
+    </objects>
   </objects>
+  <timelines name="timelines">
+    <timeline>timelines\tln_board</timeline>
+  </timelines>
   <rooms name="rooms">
     <room>rooms\rom_menu</room>
+    <room>rooms\rom_board</room>
     <room>rooms\rom_m1</room>
     <room>rooms\rom_m2</room>
   </rooms>

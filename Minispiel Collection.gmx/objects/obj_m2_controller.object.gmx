@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-10000</depth>
   <persistent>0</persistent>
   <parentName>obj_controllerp</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_create(random(room_width),random(room_height),obj_m2_p1);
+            <string>event_inherited();
+
+instance_create(random(room_width),random(room_height),obj_m2_p1);
 instance_create(random(room_width),random(room_height),obj_m2_p2);
 </string>
           </argument>

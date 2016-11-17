@@ -44,7 +44,7 @@ if (global.currentround == 1) {
     </event>
   </entry>
   <entry>
-    <step>120</step>
+    <step>90</step>
     <event>
       <action>
         <libid>1</libid>

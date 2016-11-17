@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-10000</depth>
   <persistent>0</persistent>
   <parentName>obj_controllerp</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -25,7 +25,32 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>randomize();
+            <string>event_inherited();
+
+randomize();
+global.fadeout = false;
+global.gamemode = 1;
+global.rounds = 5;
+global.currentround = 1;
+global.winner = 0;
+global.p1wins = 0;
+global.p2wins = 0;
+global.gamecount = 2;
+global.nextgame = ceil(random(global.gamecount));
+
+global.p1Left = ord('A');
+global.p1Right = ord('D');
+global.p1Up = ord('W');
+global.p1Down = ord('S');
+global.p1Action = vk_control;
+global.p2Left = vk_left;
+global.p2Right = vk_right;
+global.p2Up = vk_up;
+global.p2Down = vk_down;
+global.p2Action = vk_enter;
+
+global.texts[1] = "SNEEMANN ODER SO";
+global.texts[2] = "KURVE DIE ACHTUNG";
 </string>
           </argument>
         </arguments>

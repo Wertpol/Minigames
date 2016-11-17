@@ -8,6 +8,7 @@
   <sprites name="sprites">
     <sprite>sprites\spr_wall</sprite>
     <sprite>sprites\spr_startall</sprite>
+    <sprite>sprites\spr_board_transition</sprite>
     <sprites name="grp_m1">
       <sprite>sprites\spr_menu_start</sprite>
       <sprite>sprites\spr_m1_p1</sprite>
@@ -42,6 +43,7 @@
   <objects name="objects">
     <object>objects\obj_controllerp</object>
     <object>objects\obj_controller</object>
+    <object>objects\obj_btnp</object>
     <object>objects\obj_start</object>
     <object>objects\obj_start_m2</object>
     <object>objects\obj_startall</object>

@@ -3,9 +3,9 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-10000</depth>
   <persistent>0</persistent>
-  <parentName>obj_mp</parentName>
+  <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -25,19 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>event_inherited();
-
-movespeed = 14;
-grav = 1;
-hsp = 0;
-vsp = 0;
-jump = 30;
-image_speed = 0;
-if (player == 1) {
-    image_index = 0;
-} else {
-    image_index = 1;
-}
+            <string>fadeout = false;
+yfade = -1240;
 </string>
           </argument>
         </arguments>
@@ -60,49 +49,67 @@ if (player == 1) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>event_inherited();
-
-//React to inputs
-move = right - left;
-hsp = move * movespeed;
-if (vsp &lt; 30) {
-    vsp += grav;
-}
-
-//flip sprite
-if (move &gt; 0) {
-    image_index = 0;
-} else if (move &lt; 0) {
-    image_index = 1;
-}
-
-if (place_meeting(x,y+1,obj_m1_wall)) {
-    var yumpin = 0;
-    if (action || up) {
-        yumpin = 1;
+            <string>if (fadeout == true) {
+    view_yview[0] += median(-20,(-540-view_yview[0])/5,20);
+    yfade += median(-20,(-540 - yfade)/5,20);
+    if (yfade + 540 &gt; -2) {
+        room_goto(roomid);
+        global.fadeout = false;
     }
-    vsp = yumpin * -jump;
 }
-
-//Horizontal Collision
-if (place_meeting(x+hsp,y,obj_m1_wall)) {
-    while(!place_meeting(x+sign(hsp),y,obj_m1_wall)) {
-        x += sign(hsp);
-    }
-    hsp = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="6" enumb="4">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (global.fadeout == false) {
+    fadeout = true;
+    global.fadeout = true;
 }
-x += hsp;
-
-//Vertical Collision
-if (place_meeting(x,y+vsp,obj_m1_wall))
-{
-    while(!place_meeting(x,y+sign(vsp),obj_m1_wall))
-    {
-        y += sign(vsp);
-    }
-    vsp = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_self();
+if (fadeout == true) {
+    draw_sprite(spr_board_transition,0,0,yfade);
 }
-y += vsp;
+draw_text(0,0,view_yview[0]);
 </string>
           </argument>
         </arguments>

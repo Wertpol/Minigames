@@ -28,7 +28,7 @@
             <string>active = false;
 text = "";
 textcopy = "";
-textcounter = 0;
+textcounter = 1;
 letterid = 0;
 
 xletters[0] = 0;
@@ -109,11 +109,15 @@ yletters[26] = 200;
           <argument>
             <kind>1</kind>
             <string>if (active == true) {
-    move_towards_point(xletters[letterid],yletters[letterid],point_distance(x,y,xletters[letterid],yletters[letterid])/5);
+    move_towards_point(xletters[letterid],yletters[letterid],point_distance(x,y,xletters[letterid],yletters[letterid])/3);
     if (point_distance(x,y,xletters[letterid],yletters[letterid]) &lt; 2) {
         //run this everytime a new letter comes up
         textcounter++;
         textcopy = textcopy + currentletter;
+        //stop when done copying
+        if (string_length(textcopy) == string_length(text)) {
+            alarm[0] = 60;
+        }
         currentletter = string_char_at(text, textcounter);
         switch (currentletter) {
             case " ": letterid = 0; break;

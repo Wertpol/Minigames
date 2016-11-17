@@ -33,14 +33,26 @@
       <sprite>sprites\spr_board_ghost</sprite>
       <sprite>sprites\spr_board_planchette</sprite>
     </sprites>
+    <sprites name="grp_m3">
+      <sprite>sprites\spr_menu_m3</sprite>
+      <sprite>sprites\spr_m3_runner</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bac_board</background>
     <background>background\bac_m1</background>
     <background>background\bac_m2</background>
+    <background>background\bac_m3</background>
   </backgrounds>
   <paths name="paths"/>
   <objects name="objects">
+    <objects name="grp_m3">
+      <object>objects\obj_m3_pp</object>
+      <object>objects\obj_m3_p1</object>
+      <object>objects\obj_m3_wall</object>
+      <object>objects\obj_m3_controller</object>
+      <object>objects\obj_m3_runner</object>
+    </objects>
     <object>objects\obj_controllerp</object>
     <object>objects\obj_controller</object>
     <object>objects\obj_btnp</object>
@@ -76,13 +88,6 @@
       <object>objects\obj_board_ghost</object>
       <object>objects\obj_board_controller</object>
       <object>objects\obj_board_planchette</object>
-    </objects>
-    <objects name="grp_m3">
-      <object>objects\obj_m3_pp</object>
-      <object>objects\obj_m3_p1</object>
-      <object>objects\obj_m3_p2</object>
-      <object>objects\obj_m3_wall</object>
-      <object>objects\obj_m3_controller</object>
     </objects>
   </objects>
   <timelines name="timelines">

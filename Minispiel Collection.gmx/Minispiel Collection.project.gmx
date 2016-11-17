@@ -36,6 +36,9 @@
     <sprites name="grp_m3">
       <sprite>sprites\spr_menu_m3</sprite>
       <sprite>sprites\spr_m3_runner</sprite>
+      <sprite>sprites\spr_m3_up</sprite>
+      <sprite>sprites\spr_m3_down</sprite>
+      <sprite>sprites\spr_m3_action</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -44,7 +47,9 @@
     <background>background\bac_m2</background>
     <background>background\bac_m3</background>
   </backgrounds>
-  <paths name="paths"/>
+  <paths name="paths">
+    <path>paths\path0</path>
+  </paths>
   <objects name="objects">
     <objects name="grp_m3">
       <object>objects\obj_m3_pp</object>
@@ -52,6 +57,9 @@
       <object>objects\obj_m3_wall</object>
       <object>objects\obj_m3_controller</object>
       <object>objects\obj_m3_runner</object>
+      <object>objects\obj_m3_up</object>
+      <object>objects\obj_m3_down</object>
+      <object>objects\obj_m3_action</object>
     </objects>
     <object>objects\obj_controllerp</object>
     <object>objects\obj_controller</object>

@@ -46,6 +46,7 @@
     <object>objects\obj_btnp</object>
     <object>objects\obj_start</object>
     <object>objects\obj_start_m2</object>
+    <object>objects\obj_start_m3</object>
     <object>objects\obj_startall</object>
     <object>objects\obj_mp</object>
     <objects name="grp_m1">
@@ -76,6 +77,13 @@
       <object>objects\obj_board_controller</object>
       <object>objects\obj_board_planchette</object>
     </objects>
+    <objects name="grp_m3">
+      <object>objects\obj_m3_pp</object>
+      <object>objects\obj_m3_p1</object>
+      <object>objects\obj_m3_p2</object>
+      <object>objects\obj_m3_wall</object>
+      <object>objects\obj_m3_controller</object>
+    </objects>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\tln_board</timeline>
@@ -85,6 +93,7 @@
     <room>rooms\rom_board</room>
     <room>rooms\rom_m1</room>
     <room>rooms\rom_m2</room>
+    <room>rooms\rom_m3</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

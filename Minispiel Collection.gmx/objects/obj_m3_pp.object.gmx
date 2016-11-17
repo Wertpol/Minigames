@@ -27,13 +27,11 @@
             <kind>1</kind>
             <string>event_inherited();
 
-frames = 3;
-frameCount = 1;
-randomCount = 0;
-randomCount2 = 50;
-spd = 5;
-turnspeed = 4;
-image_angle = irandom_range(0,360);
+movespeed = 14;
+grav = 1;
+hsp = 0;
+vsp = 0;
+jump = 30;
 </string>
           </argument>
         </arguments>
@@ -58,113 +56,40 @@ image_angle = irandom_range(0,360);
             <kind>1</kind>
             <string>event_inherited();
 
-//continues movement
-motion_set(image_angle, spd);
-
-if(right){
-    image_angle -= turnspeed;
+//React to inputs
+move = right - left;
+hsp = move * movespeed;
+if (vsp &lt; 30) {
+    vsp += grav;
 }
 
-if(left){
-    image_angle += turnspeed;
-}
-
-// continues movement thru walls
-
-if(x &gt; room_width + 16){
-    x -= room_width + 32;
-}
-
-if(y &gt; room_height + 16){
-    y -= room_height + 32;
-}
-
-if(x &lt; - 16){
-    x += room_width + 32;
-}
-
-if(y &lt; - 16){
-    y += room_height + 32;
-}
-
-//Spawn tail
-randomCount++;
-randomCount2++;
-
-frameCount++;
-
-if(frameCount &gt; frames){
-    count = 1;
-}
-
-if(frameCount == frames){
-    if (player == 1) {
-        if(randomCount &lt; 230){
-            tail = instance_create(x,y,obj_m2_p1_tail);
-            with tail{
-                image_angle = other.image_angle;   
-            }
-        }
-    }else{
-        if(randomCount2 &lt; 230){
-            tail = instance_create(x,y,obj_m2_p2_tail);
-            with tail{
-                image_angle = other.image_angle;   
-            }
-        }
+if (place_meeting(x,y+1,obj_m1_wall)) {
+    var yumpin = 0;
+    if (action || up) {
+        yumpin = 1;
     }
-    frameCount = 1;    
+    vsp = yumpin * -jump;
 }
 
-
-if(randomCount == 250){
-    randomCount = irandom_range(0,150);
-}
-
-if(randomCount2 == 250){
-    randomCount2 = irandom_range(0,150);
-}
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="obj_m2_tailp">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if (player == 1) {
-    if (other.player = 1) {
-        if (other.active == true) {
-            instance_destroy();
-        }
-    } else {
-        instance_destroy();
+//Horizontal Collision
+if (place_meeting(x+hsp,y,obj_m1_wall)) {
+    while(!place_meeting(x+sign(hsp),y,obj_m1_wall)) {
+        x += sign(hsp);
     }
-} else {
-    if (other.player = 2) {
-        if (other.active == true) {
-            instance_destroy();
-        }
-    } else {
-        instance_destroy();
-    }
-} 
+    hsp = 0;
+}
+x += hsp;
 
+//Vertical Collision
+if (place_meeting(x,y+vsp,obj_m1_wall))
+{
+    while(!place_meeting(x,y+sign(vsp),obj_m1_wall))
+    {
+        y += sign(vsp);
+    }
+    vsp = 0;
+}
+y += vsp;
 </string>
           </argument>
         </arguments>

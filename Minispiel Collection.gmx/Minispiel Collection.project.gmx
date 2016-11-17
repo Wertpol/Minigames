@@ -40,6 +40,7 @@
   </backgrounds>
   <paths name="paths"/>
   <objects name="objects">
+    <object>objects\obj_controllerp</object>
     <object>objects\obj_controller</object>
     <object>objects\obj_start</object>
     <object>objects\obj_start_m2</object>

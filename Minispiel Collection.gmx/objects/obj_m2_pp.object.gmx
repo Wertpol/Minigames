@@ -32,7 +32,7 @@ frameCount = 1;
 randomCount = 0;
 randomCount2 = 50;
 spd = 5;
-turnspeed = 4;
+turnspeed = 5;
 image_angle = irandom_range(0,360);
 </string>
           </argument>
@@ -87,8 +87,28 @@ if(y &lt; - 16){
     y += room_height + 32;
 }
 
+if(player == 1 &amp;&amp; action){
+
+    tail = instance_create(x,y,obj_m2_p1_tail);
+            with tail{
+                image_angle = other.image_angle;   
+            }
+
+}
+
+if(player == 2 &amp;&amp; action){
+
+    tail = instance_create(x,y,obj_m2_p2_tail);
+            with tail{
+                image_angle = other.image_angle;   
+            }
+
+}
+
 //Spawn tail
-randomCount++;
+
+
+/*randomCount++;
 randomCount2++;
 
 frameCount++;
@@ -124,7 +144,7 @@ if(randomCount == 250){
 if(randomCount2 == 250){
     randomCount2 = irandom_range(0,150);
 }
-
+*/
 </string>
           </argument>
         </arguments>

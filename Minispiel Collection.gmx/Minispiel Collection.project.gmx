@@ -9,6 +9,13 @@
     <sprite>sprites\spr_wall</sprite>
     <sprite>sprites\spr_startall</sprite>
     <sprite>sprites\spr_board_transition</sprite>
+    <sprites name="grp_board">
+      <sprite>sprites\spr_board_p1</sprite>
+      <sprite>sprites\spr_board_p2</sprite>
+      <sprite>sprites\spr_board_table</sprite>
+      <sprite>sprites\spr_board_ghost</sprite>
+      <sprite>sprites\spr_board_planchette</sprite>
+    </sprites>
     <sprites name="grp_m1">
       <sprite>sprites\spr_menu_start</sprite>
       <sprite>sprites\spr_m1_p1</sprite>
@@ -26,13 +33,6 @@
       <sprite>sprites\spr_m2_p1_tail</sprite>
       <sprite>sprites\spr_m2_p2_tail</sprite>
     </sprites>
-    <sprites name="grp_board">
-      <sprite>sprites\spr_board_p1</sprite>
-      <sprite>sprites\spr_board_p2</sprite>
-      <sprite>sprites\spr_board_table</sprite>
-      <sprite>sprites\spr_board_ghost</sprite>
-      <sprite>sprites\spr_board_planchette</sprite>
-    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bac_board</background>
@@ -49,26 +49,6 @@
     <object>objects\obj_start_m3</object>
     <object>objects\obj_startall</object>
     <object>objects\obj_mp</object>
-    <objects name="grp_m1">
-      <object>objects\obj_m1_pp</object>
-      <object>objects\obj_m1_p1</object>
-      <object>objects\obj_m1_p2</object>
-      <object>objects\obj_m1_boi</object>
-      <object>objects\obj_m1_kind</object>
-      <object>objects\obj_m1_controller</object>
-      <object>objects\obj_m1_wall</object>
-      <object>objects\obj_m1_fence</object>
-    </objects>
-    <objects name="grp_m2">
-      <object>objects\obj_m2_pp</object>
-      <object>objects\obj_m2_p1</object>
-      <object>objects\obj_m2_p2</object>
-      <object>objects\obj_m2_wall</object>
-      <object>objects\obj_m2_controller</object>
-      <object>objects\obj_m2_tailp</object>
-      <object>objects\obj_m2_p1_tail</object>
-      <object>objects\obj_m2_p2_tail</object>
-    </objects>
     <objects name="grp_board">
       <object>objects\obj_board_p1</object>
       <object>objects\obj_board_p2</object>
@@ -77,12 +57,35 @@
       <object>objects\obj_board_controller</object>
       <object>objects\obj_board_planchette</object>
     </objects>
+    <objects name="grp_m1">
+      <object>objects\obj_m1_controller</object>
+      <object>objects\obj_m1_wall</object>
+      <object>objects\obj_m1_pp</object>
+      <object>objects\obj_m1_p1</object>
+      <object>objects\obj_m1_p2</object>
+      <object>objects\obj_m1_boi</object>
+      <object>objects\obj_m1_kind</object>
+      <object>objects\obj_m1_fence</object>
+    </objects>
+    <objects name="grp_m2">
+      <object>objects\obj_m2_controller</object>
+      <object>objects\obj_m2_wall</object>
+      <object>objects\obj_m2_pp</object>
+      <object>objects\obj_m2_p1</object>
+      <object>objects\obj_m2_p2</object>
+      <object>objects\obj_m2_tailp</object>
+      <object>objects\obj_m2_p1_tail</object>
+      <object>objects\obj_m2_p2_tail</object>
+    </objects>
     <objects name="grp_m3">
+      <object>objects\obj_m3_controller</object>
+      <object>objects\obj_m3_wall</object>
       <object>objects\obj_m3_pp</object>
       <object>objects\obj_m3_p1</object>
       <object>objects\obj_m3_p2</object>
-      <object>objects\obj_m3_wall</object>
-      <object>objects\obj_m3_controller</object>
+    </objects>
+    <objects name="grp_m4">
+      <object>objects\obj_m4_controller</object>
     </objects>
   </objects>
   <timelines name="timelines">

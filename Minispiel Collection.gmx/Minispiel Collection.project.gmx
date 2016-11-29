@@ -33,6 +33,14 @@
       <sprite>sprites\spr_m2_p1_tail</sprite>
       <sprite>sprites\spr_m2_p2_tail</sprite>
     </sprites>
+    <sprites name="grp_m3">
+      <sprite>sprites\spr_menu_m3</sprite>
+    </sprites>
+    <sprites name="grp_m4">
+      <sprite>sprites\spr_menu_m4</sprite>
+      <sprite>sprites\spr_m4_p1</sprite>
+      <sprite>sprites\spr_m4_p2</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bac_board</background>
@@ -47,6 +55,7 @@
     <object>objects\obj_start</object>
     <object>objects\obj_start_m2</object>
     <object>objects\obj_start_m3</object>
+    <object>objects\obj_start_m4</object>
     <object>objects\obj_startall</object>
     <object>objects\obj_mp</object>
     <objects name="grp_board">
@@ -86,6 +95,9 @@
     </objects>
     <objects name="grp_m4">
       <object>objects\obj_m4_controller</object>
+      <object>objects\obj_m4_pp</object>
+      <object>objects\obj_m4_p1</object>
+      <object>objects\obj_m4_p2</object>
     </objects>
   </objects>
   <timelines name="timelines">
@@ -97,6 +109,7 @@
     <room>rooms\rom_m1</room>
     <room>rooms\rom_m2</room>
     <room>rooms\rom_m3</room>
+    <room>rooms\rom_m4</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

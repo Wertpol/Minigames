@@ -27,17 +27,6 @@
             <kind>1</kind>
             <string>image_speed = 0.5;
 
-global.p1Left = ord('A');
-global.p1Right = ord('D');
-global.p1Up = ord('W');
-global.p1Down = ord('S');
-global.p1Action = vk_control;
-global.p2Left = vk_left;
-global.p2Right = vk_right;
-global.p2Up = vk_up;
-global.p2Down = vk_down;
-global.p2Action = vk_enter;
-
 event_inherited();
 roomid = rom_m2;
 </string>

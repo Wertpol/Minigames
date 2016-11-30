@@ -41,6 +41,7 @@
       <sprite>sprites\spr_m4_p1</sprite>
       <sprite>sprites\spr_m4_p2</sprite>
     </sprites>
+    <sprite>sprites\spr_m4_smallwheel</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bac_board</background>
@@ -48,6 +49,9 @@
     <background>background\bac_m2</background>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\scr_endround.gml</script>
+  </scripts>
   <objects name="objects">
     <object>objects\obj_controllerp</object>
     <object>objects\obj_controller</object>
@@ -78,7 +82,6 @@
     </objects>
     <objects name="grp_m2">
       <object>objects\obj_m2_controller</object>
-      <object>objects\obj_m2_wall</object>
       <object>objects\obj_m2_pp</object>
       <object>objects\obj_m2_p1</object>
       <object>objects\obj_m2_p2</object>
@@ -98,6 +101,7 @@
       <object>objects\obj_m4_pp</object>
       <object>objects\obj_m4_p1</object>
       <object>objects\obj_m4_p2</object>
+      <object>objects\obj_m4_smallwheel</object>
     </objects>
   </objects>
   <timelines name="timelines">

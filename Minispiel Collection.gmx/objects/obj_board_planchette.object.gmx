@@ -30,6 +30,7 @@ text = "";
 textcopy = "";
 textcounter = 1;
 letterid = 0;
+donewriting = false;
 
 xletters[0] = 0;
 xletters[1] = 100;
@@ -91,6 +92,49 @@ yletters[26] = 200;
         </arguments>
       </action>
     </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>with (obj_board_controller) {
+    if (global.fadeout == false) {
+        fadeout = true;
+        global.fadeout = true;
+        switch (global.nextgame) {
+            case 1: 
+                roomid = rom_m1;
+            break;
+            case 2: 
+                roomid = rom_m2;
+            break;
+            case 3: 
+                roomid = rom_m3;
+            break;
+            case 4: 
+                roomid = rom_m4;
+            break;
+        }
+        yfade = -1240;
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -115,7 +159,8 @@ yletters[26] = 200;
         textcounter++;
         textcopy = textcopy + currentletter;
         //stop when done copying
-        if (string_length(textcopy) == string_length(text)) {
+        if (string_length(textcopy) == string_length(text) &amp;&amp; donewriting == false) {
+            donewriting = true;
             alarm[0] = 60;
         }
         currentletter = string_char_at(text, textcounter);

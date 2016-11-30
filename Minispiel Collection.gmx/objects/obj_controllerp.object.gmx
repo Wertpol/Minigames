@@ -27,6 +27,8 @@
             <kind>1</kind>
             <string>view_yview[0] = 540;
 yfade = 540;
+fadeout = false;
+roomid = rom_menu;
 </string>
           </argument>
         </arguments>
@@ -52,6 +54,14 @@ yfade = 540;
             <string>if (global.fadeout == false) {
     view_yview[0] -= median(-20,view_yview[0]/5,20);
     yfade += median(-20,(1240 - yfade)/5,20);
+}
+if (fadeout == true) {
+    view_yview[0] += median(-20,(-540-view_yview[0])/5,20);
+    yfade += median(-20,(-540 - yfade)/5,20);
+    if (yfade + 540 &gt; -2) {
+        room_goto(roomid);
+        global.fadeout = false;
+    }
 }
 </string>
           </argument>

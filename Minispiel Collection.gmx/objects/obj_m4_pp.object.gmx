@@ -27,9 +27,10 @@
             <kind>1</kind>
             <string>event_inherited();
 
-dir = 90;
-rotspd = 30;
+dir = 0;
+rotspd = 20;
 progress = 0;
+progspd = 15;
 </string>
           </argument>
         </arguments>
@@ -53,49 +54,92 @@ progress = 0;
           <argument>
             <kind>1</kind>
             <string>event_inherited();
-
-//Right Key
-if (right) {
-    if (dir != 0) {
-        if (dir &gt; 180) {
-            dir += rotspd;
-            progress += rotspd;
-        } else {
-            dir -= rotspd;
-            progress -= rotspd;
+if (player == 1) {
+    if (right) {
+        if (dir != 0 &amp;&amp; dir != 180) {
+            if (dir &gt; 180) {
+                dir += rotspd;
+                progress += progspd;
+            } else {
+                dir -= rotspd;
+                progress -= progspd;
+            }
+        }
+    } else if (up) {
+        if (dir != 100 &amp;&amp; dir != 280) {
+            if (dir &gt; 280 or dir &lt; 100) {
+                dir += rotspd;
+                progress += progspd;
+            } else {
+                dir -= rotspd;
+                progress -= progspd;
+            }
+        }
+    } else if (left) {
+        if (dir != 180 &amp;&amp; dir != 0) {
+            if (dir &lt; 180) {
+                dir += rotspd;
+                progress += progspd;
+            } else {
+                dir -= rotspd;
+                progress -= progspd;
+            }
+        }
+    } else if (down) {
+        if (dir != 280 &amp;&amp; dir != 100) {
+            if (dir &lt; 280 and dir &gt; 100) {
+                dir += rotspd;
+                progress += progspd;
+            } else {
+                dir -= rotspd;
+                progress -= progspd;
+            }
         }
     }
-} else if (up) {
-    if (dir != 90) {
-        if (dir &gt; 270 or dir &lt; 90) {
-            dir += rotspd;
-            progress += rotspd;
-        } else {
-            dir -= rotspd;
-            progress -= rotspd;
+} else {
+    if (down) {
+        if (dir != 280 &amp;&amp; dir != 100) {
+            if (dir &lt; 280 and dir &gt; 100) {
+                dir += rotspd;
+                progress += progspd;
+            } else {
+                dir -= rotspd;
+                progress -= progspd;
+            }
         }
-    }
-} else if (left) {
-    if (dir != 180) {
-        if (dir &lt; 180) {
-            dir += rotspd;
-            progress += rotspd;
-        } else {
-            dir -= rotspd;
-            progress -= rotspd;
+    } else if (left) {
+        if (dir != 180 &amp;&amp; dir != 0) {
+            if (dir &lt; 180) {
+                dir += rotspd;
+                progress += progspd;
+            } else {
+                dir -= rotspd;
+                progress -= progspd;
+            }
         }
-    }
-} else if (down) {
-    if (dir != 270) {
-        if (dir &lt; 270 and dir &gt; 90) {
-            dir += rotspd;
-            progress += rotspd;
-        } else {
-            dir -= rotspd;
-            progress -= rotspd;
+    } else if (up) {
+        if (dir != 100 &amp;&amp; dir != 280) {
+            if (dir &gt; 280 or dir &lt; 100) {
+                dir += rotspd;
+                progress += progspd;
+            } else {
+                dir -= rotspd;
+                progress -= progspd;
+            }
+        }
+    } else if (right) {
+        if (dir != 0 &amp;&amp; dir != 180) {
+            if (dir &gt; 180) {
+                dir += rotspd;
+                progress += progspd;
+            } else {
+                dir -= rotspd;
+                progress -= progspd;
+            }
         }
     }
 }
+
 
 //Loop dir
 if (dir &lt; 0) {

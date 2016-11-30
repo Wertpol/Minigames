@@ -170,17 +170,29 @@ if(randomCount2 == 250){
             <string>if (player == 1) {
     if (other.player = 1) {
         if (other.active == true) {
+            with (obj_m2_controller) {
+                alarm[1] = 60;
+            }
             instance_destroy();
         }
     } else {
+        with (obj_m2_controller) {
+            alarm[1] = 60;
+        }
         instance_destroy();
     }
 } else {
     if (other.player = 2) {
         if (other.active == true) {
+            with (obj_m2_controller) {
+                alarm[2] = 60;
+            }
             instance_destroy();
         }
     } else {
+        with (obj_m2_controller) {
+            alarm[2] = 60;
+        }
         instance_destroy();
     }
 } 

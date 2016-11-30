@@ -35,7 +35,7 @@ global.currentround = 1;
 global.winner = 0;
 global.p1wins = 0;
 global.p2wins = 0;
-global.gamecount = 2;
+global.gamecount = 4;
 global.nextgame = ceil(random(global.gamecount));
 
 global.p1Left = ord('A');
@@ -51,6 +51,8 @@ global.p2Action = vk_enter;
 
 global.texts[1] = "SNEEMANN ODER SO";
 global.texts[2] = "KURVE DIE ACHTUNG";
+global.texts[3] = "MAZERUNNER";
+global.texts[4] = "STEILE CRANKEN WAS DAS ZEUG HAELT";
 </string>
           </argument>
         </arguments>

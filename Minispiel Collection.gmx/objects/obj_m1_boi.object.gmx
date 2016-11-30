@@ -32,6 +32,53 @@ vsp = 0;
 rotspeed = random_range(4,8);
 //true = right, false = left
 rot = true;
+gameover = false;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>scr_endround(2);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>scr_endround(1);
 </string>
           </argument>
         </arguments>
@@ -54,7 +101,22 @@ rot = true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//rotation
+            <string>//If ball lands on ground
+if (y + vsp &gt; 928) {
+    if (x &lt; 960) {
+        if (gameover == false) {
+            gameover = true;
+            alarm[1] = 60;
+        }
+    } else {
+        if (gameover == false) {
+            gameover = true;
+            alarm[2] = 60;
+        }
+    }
+}
+
+//rotation
 if (rot == true) {
     dir += rotspeed;
     if (dir &gt; 360) {

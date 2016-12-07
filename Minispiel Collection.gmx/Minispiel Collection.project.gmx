@@ -40,13 +40,28 @@
       <sprite>sprites\spr_menu_m4</sprite>
       <sprite>sprites\spr_m4_p1</sprite>
       <sprite>sprites\spr_m4_p2</sprite>
+      <sprite>sprites\spr_m4_smallwheel</sprite>
+      <sprite>sprites\spr_m4_drivers</sprite>
     </sprites>
-    <sprite>sprites\spr_m4_smallwheel</sprite>
+    <sprites name="grp_m5">
+      <sprite>sprites\spr_menu_m5</sprite>
+      <sprite>sprites\spr_m5_p1</sprite>
+      <sprite>sprites\spr_m5_p2</sprite>
+      <sprite>sprites\spr_m5_pipes</sprite>
+      <sprite>sprites\spr_m5_lever</sprite>
+      <sprite>sprites\spr_m5_emptyglass_left</sprite>
+      <sprite>sprites\spr_m5_emptyglass_right</sprite>
+      <sprite>sprites\spr_m5_greendrink</sprite>
+      <sprite>sprites\spr_m5_purpledrink</sprite>
+      <sprite>sprites\spr_m5_greendrop</sprite>
+      <sprite>sprites\spr_m5_purpledrop</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bac_board</background>
     <background>background\bac_m1</background>
     <background>background\bac_m2</background>
+    <background>background\bac_m5</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -60,6 +75,7 @@
     <object>objects\obj_start_m2</object>
     <object>objects\obj_start_m3</object>
     <object>objects\obj_start_m4</object>
+    <object>objects\obj_start_m5</object>
     <object>objects\obj_startall</object>
     <object>objects\obj_mp</object>
     <objects name="grp_board">
@@ -102,6 +118,21 @@
       <object>objects\obj_m4_p1</object>
       <object>objects\obj_m4_p2</object>
       <object>objects\obj_m4_smallwheel</object>
+      <object>objects\obj_m4_drivers</object>
+    </objects>
+    <objects name="grp_m5">
+      <object>objects\obj_m5_controller</object>
+      <object>objects\obj_m5_pp</object>
+      <object>objects\obj_m5_p1</object>
+      <object>objects\obj_m5_p2</object>
+      <object>objects\obj_m5_pipes</object>
+      <object>objects\obj_m5_lever</object>
+      <object>objects\obj_m5_emptyglass_left</object>
+      <object>objects\obj_m5_emptyglass_right</object>
+      <object>objects\obj_m5_greendrink</object>
+      <object>objects\obj_m5_purpledrink</object>
+      <object>objects\obj_m5_greendrop</object>
+      <object>objects\obj_m5_purpledrop</object>
     </objects>
   </objects>
   <timelines name="timelines">
@@ -114,6 +145,7 @@
     <room>rooms\rom_m2</room>
     <room>rooms\rom_m3</room>
     <room>rooms\rom_m4</room>
+    <room>rooms\rom_m5</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

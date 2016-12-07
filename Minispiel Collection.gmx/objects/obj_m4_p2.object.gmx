@@ -50,7 +50,7 @@ event_inherited();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>x = obj_m4_smallwheel.x+224;
+            <string>x = obj_m4_smallwheel.x+96;
 </string>
           </argument>
         </arguments>

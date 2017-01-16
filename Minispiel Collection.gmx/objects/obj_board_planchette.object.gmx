@@ -218,7 +218,11 @@ yletters[26] = 905;
           <argument>
             <kind>1</kind>
             <string>draw_self();
-draw_text(0,0,textcopy);
+draw_set_halign(fa_center);
+draw_set_valign(fa_middle);
+draw_set_font(fnt_minigamename);
+draw_set_colour(c_white);
+draw_text(980,478,textcopy);
 </string>
           </argument>
         </arguments>

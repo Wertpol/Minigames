@@ -31,6 +31,7 @@ dir = 0;
 rotspd = 20;
 progress = 0;
 progspd = 15;
+fallingthings = 0;
 image_speed = 0;
 </string>
           </argument>
@@ -55,102 +56,105 @@ image_speed = 0;
           <argument>
             <kind>1</kind>
             <string>event_inherited();
-if (player == 1) {
-    if (right) {
-        if (dir != 0 &amp;&amp; dir != 180) {
-            if (dir &gt; 180) {
-                dir += rotspd;
-                progress += progspd;
-            } else {
-                dir -= rotspd;
-                progress -= progspd;
+if (obj_m4_controller.pwon == 0 || obj_m4_controller.pwon == player) {
+    if (player == 1) {
+        if (right) {
+            if (dir != 0 &amp;&amp; dir != 180) {
+                if (dir &gt; 180) {
+                    dir += rotspd;
+                    progress += progspd;
+                } else {
+                    dir -= rotspd;
+                    progress -= progspd;
+                }
+            }
+        } else if (up) {
+            if (dir != 100 &amp;&amp; dir != 280) {
+                if (dir &gt; 280 or dir &lt; 100) {
+                    dir += rotspd;
+                    progress += progspd;
+                } else {
+                    dir -= rotspd;
+                    progress -= progspd;
+                }
+            }
+        } else if (left) {
+            if (dir != 180 &amp;&amp; dir != 0) {
+                if (dir &lt; 180) {
+                    dir += rotspd;
+                    progress += progspd;
+                } else {
+                    dir -= rotspd;
+                    progress -= progspd;
+                }
+            }
+        } else if (down) {
+            if (dir != 280 &amp;&amp; dir != 100) {
+                if (dir &lt; 280 and dir &gt; 100) {
+                    dir += rotspd;
+                    progress += progspd;
+                } else {
+                    dir -= rotspd;
+                    progress -= progspd;
+                }
             }
         }
-    } else if (up) {
-        if (dir != 100 &amp;&amp; dir != 280) {
-            if (dir &gt; 280 or dir &lt; 100) {
-                dir += rotspd;
-                progress += progspd;
-            } else {
-                dir -= rotspd;
-                progress -= progspd;
+    } else {
+        if (down) {
+            if (dir != 280 &amp;&amp; dir != 100) {
+                if (dir &lt; 280 and dir &gt; 100) {
+                    dir += rotspd;
+                    progress += progspd;
+                } else {
+                    dir -= rotspd;
+                    progress -= progspd;
+                }
             }
-        }
-    } else if (left) {
-        if (dir != 180 &amp;&amp; dir != 0) {
-            if (dir &lt; 180) {
-                dir += rotspd;
-                progress += progspd;
-            } else {
-                dir -= rotspd;
-                progress -= progspd;
+        } else if (left) {
+            if (dir != 180 &amp;&amp; dir != 0) {
+                if (dir &lt; 180) {
+                    dir += rotspd;
+                    progress += progspd;
+                } else {
+                    dir -= rotspd;
+                    progress -= progspd;
+                }
             }
-        }
-    } else if (down) {
-        if (dir != 280 &amp;&amp; dir != 100) {
-            if (dir &lt; 280 and dir &gt; 100) {
-                dir += rotspd;
-                progress += progspd;
-            } else {
-                dir -= rotspd;
-                progress -= progspd;
+        } else if (up) {
+            if (dir != 100 &amp;&amp; dir != 280) {
+                if (dir &gt; 280 or dir &lt; 100) {
+                    dir += rotspd;
+                    progress += progspd;
+                } else {
+                    dir -= rotspd;
+                    progress -= progspd;
+                }
+            }
+        } else if (right) {
+            if (dir != 0 &amp;&amp; dir != 180) {
+                if (dir &gt; 180) {
+                    dir += rotspd;
+                    progress += progspd;
+                } else {
+                    dir -= rotspd;
+                    progress -= progspd;
+                }
             }
         }
     }
-} else {
-    if (down) {
-        if (dir != 280 &amp;&amp; dir != 100) {
-            if (dir &lt; 280 and dir &gt; 100) {
-                dir += rotspd;
-                progress += progspd;
-            } else {
-                dir -= rotspd;
-                progress -= progspd;
-            }
-        }
-    } else if (left) {
-        if (dir != 180 &amp;&amp; dir != 0) {
-            if (dir &lt; 180) {
-                dir += rotspd;
-                progress += progspd;
-            } else {
-                dir -= rotspd;
-                progress -= progspd;
-            }
-        }
-    } else if (up) {
-        if (dir != 100 &amp;&amp; dir != 280) {
-            if (dir &gt; 280 or dir &lt; 100) {
-                dir += rotspd;
-                progress += progspd;
-            } else {
-                dir -= rotspd;
-                progress -= progspd;
-            }
-        }
-    } else if (right) {
-        if (dir != 0 &amp;&amp; dir != 180) {
-            if (dir &gt; 180) {
-                dir += rotspd;
-                progress += progspd;
-            } else {
-                dir -= rotspd;
-                progress -= progspd;
-            }
-        }
+    
+    
+    //Loop dir
+    if (dir &lt; 0) {
+        dir += 360;
     }
+    if (dir &gt;= 360) {
+        dir -= 360;
+    }
+    
+    image_index = -ceil((dir/360)*18);
 }
 
-
-//Loop dir
-if (dir &lt; 0) {
-    dir += 360;
-}
-if (dir &gt;= 360) {
-    dir -= 360;
-}
-
-image_index = -ceil((dir/360)*18);
 </string>
           </argument>
         </arguments>

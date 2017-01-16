@@ -27,21 +27,22 @@
             <kind>1</kind>
             <string>event_inherited();
 
-instance_create(200,980,obj_m3_runner);
+instance_create(500,980,obj_m3_runner);
 
-for(i = 1; i &lt; 9; i++){
+for(i = 2; i &lt; 9; i++){
+
     k = irandom_range(0,2);
     
     if(k == 0){
-        instance_create(1920 * i, 0, obj_m3_up);
+        instance_create(960 * i, 0, obj_m3_up);
     }
     
     if(k == 1){
-        instance_create(1920 * i, 0, obj_m3_down);
+        instance_create(960 * i, 0, obj_m3_down);
     }
     
     if(k == 2){
-        instance_create(1920 * i, 0, obj_m3_action);
+        instance_create(960 * i, 0, obj_m3_action);
     }
     
 }

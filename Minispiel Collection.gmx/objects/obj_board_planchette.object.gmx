@@ -3,7 +3,7 @@
   <spriteName>spr_board_planchette</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-2</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -32,61 +32,61 @@ textcounter = 1;
 letterid = 0;
 donewriting = false;
 
-xletters[0] = 0;
-xletters[1] = 100;
-xletters[2] = 200;
-xletters[3] = 300;
-xletters[4] = 400;
-xletters[5] = 500;
-xletters[6] = 600;
-xletters[7] = 700;
-xletters[8] = 800;
-xletters[9] = 900;
-xletters[10] = 0;
-xletters[11] = 100;
-xletters[12] = 200;
-xletters[13] = 300;
-xletters[14] = 400;
-xletters[15] = 500;
-xletters[16] = 600;
-xletters[17] = 700;
-xletters[18] = 800;
-xletters[19] = 900;
-xletters[20] = 0;
-xletters[21] = 100;
-xletters[22] = 200;
-xletters[23] = 300;
-xletters[24] = 400;
-xletters[25] = 500;
-xletters[26] = 600;
+xletters[0] = 964;
+xletters[1] = 847;
+xletters[2] = 872;
+xletters[3] = 896;
+xletters[4] = 917;
+xletters[5] = 943;
+xletters[6] = 964;
+xletters[7] = 983;
+xletters[8] = 1007;
+xletters[9] = 1025;
+xletters[10] = 1042;
+xletters[11] = 1061;
+xletters[12] = 1085;
+xletters[13] = 768;
+xletters[14] = 804;
+xletters[15] = 829;
+xletters[16] = 861;
+xletters[17] = 893;
+xletters[18] = 922;
+xletters[19] = 955;
+xletters[20] = 980;
+xletters[21] = 1011;
+xletters[22] = 1038;
+xletters[23] = 1075;
+xletters[24] = 1110;
+xletters[25] = 1142;
+xletters[26] = 1172;
 
-yletters[0] = 0;
-yletters[1] = 0;
-yletters[2] = 0;
-yletters[3] = 0;
-yletters[4] = 0;
-yletters[5] = 0;
-yletters[6] = 0;
-yletters[7] = 0;
-yletters[8] = 0;
-yletters[9] = 0;
-yletters[10] = 100;
-yletters[11] = 100;
-yletters[12] = 100;
-yletters[13] = 100;
-yletters[14] = 100;
-yletters[15] = 100;
-yletters[16] = 100;
-yletters[17] = 100;
-yletters[18] = 100;
-yletters[19] = 100;
-yletters[20] = 200;
-yletters[21] = 200;
-yletters[22] = 200;
-yletters[23] = 200;
-yletters[24] = 200;
-yletters[25] = 200;
-yletters[26] = 200;
+yletters[0] = 874;
+yletters[1] = 850;
+yletters[2] = 850;
+yletters[3] = 852;
+yletters[4] = 852;
+yletters[5] = 850;
+yletters[6] = 848;
+yletters[7] = 852;
+yletters[8] = 850;
+yletters[9] = 848;
+yletters[10] = 850;
+yletters[11] = 848;
+yletters[12] = 852;
+yletters[13] = 908;
+yletters[14] = 912;
+yletters[15] = 908;
+yletters[16] = 905;
+yletters[17] = 910;
+yletters[18] = 912;
+yletters[19] = 908;
+yletters[20] = 912;
+yletters[21] = 905;
+yletters[22] = 908;
+yletters[23] = 910;
+yletters[24] = 912;
+yletters[25] = 908;
+yletters[26] = 905;
 </string>
           </argument>
         </arguments>

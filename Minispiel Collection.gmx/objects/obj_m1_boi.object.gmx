@@ -33,6 +33,8 @@ rotspeed = random_range(4,8);
 //true = right, false = left
 rot = true;
 gameover = false;
+damage = 0;
+image_speed = 0;
 </string>
           </argument>
         </arguments>
@@ -101,22 +103,7 @@ gameover = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//If ball lands on ground
-if (y + vsp &gt; 928) {
-    if (x &lt; 960) {
-        if (gameover == false) {
-            gameover = true;
-            alarm[1] = 60;
-        }
-    } else {
-        if (gameover == false) {
-            gameover = true;
-            alarm[2] = 60;
-        }
-    }
-}
-
-//rotation
+            <string>//rotation
 if (rot == true) {
     dir += rotspeed;
     if (dir &gt; 360) {
@@ -145,15 +132,20 @@ if (place_meeting(x+hsp,y,obj_m1_wall)) {
 x += hsp;
 
 //Vertical Collision
-if (place_meeting(x,y+vsp,obj_m1_wall))
-{
-    while(!place_meeting(x,y+sign(vsp),obj_m1_wall))
-    {
+if (place_meeting(x,y+vsp,obj_m1_wall)) {
+    while(!place_meeting(x,y+sign(vsp),obj_m1_wall)) {
         y += sign(vsp);
     }
-    vsp = -vsp;
+    vsp = -vsp * (1 - (damage/3));
+    if (y &gt; 768) {
+        if (damage &lt; 2) {
+            damage++;
+        }
+    }
 }
 y += vsp;
+
+image_index = damage;
 </string>
           </argument>
         </arguments>
@@ -183,6 +175,17 @@ y += vsp;
     other.dead = true;
     other.sprite_index = spr_m1_kind_kapot;
 }
+if (x &lt; 960) {
+    if (gameover == false) {
+        gameover = true;
+        alarm[1] = 60;
+    }
+} else {
+    if (gameover == false) {
+        gameover = true;
+        alarm[2] = 60;
+    }
+}
 </string>
           </argument>
         </arguments>
@@ -211,7 +214,7 @@ y += vsp;
 if (other.player == 2) {
     rot = true;
 }
-vsp = -(((1-((abs(x-other.x))/112))*20)+20);
+vsp = -(((1-((abs(x-other.x))/112))*20)+20) * (1 - (damage/10));
 hsp = (((x-other.x)/112)*30);
 rotspeed = random_range(4,50);
 </string>

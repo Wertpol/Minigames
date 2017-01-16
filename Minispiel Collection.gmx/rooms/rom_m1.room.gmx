@@ -3,8 +3,8 @@
   <caption></caption>
   <width>1920</width>
   <height>1080</height>
-  <vsnap>32</vsnap>
-  <hsnap>32</hsnap>
+  <vsnap>8</vsnap>
+  <hsnap>8</hsnap>
   <isometric>0</isometric>
   <speed>60</speed>
   <persistent>0</persistent>
@@ -62,6 +62,7 @@
     <instance objName="obj_m1_kind" x="960" y="992" name="inst_18536763" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_m1_fence" x="783" y="438" name="inst_1C9E6306" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_m1_wall" x="952" y="648" name="inst_99F22A06" locked="0" code="" scaleX="0.5" scaleY="10.8387098312378" colour="4294967295" rotation="0"/>
+    <instance objName="obj_m1_playerwall" x="952" y="456" name="inst_90DDB5CF" locked="0" code="" scaleX="0.5" scaleY="6" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

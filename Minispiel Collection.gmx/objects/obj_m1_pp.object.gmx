@@ -31,7 +31,7 @@ movespeed = 14;
 grav = 1;
 hsp = 0;
 vsp = 0;
-jump = 30;
+jump = 25;
 image_speed = 0;
 if (player == 1) {
     image_index = 0;
@@ -85,13 +85,14 @@ if (place_meeting(x,y+1,obj_m1_wall)) {
 }
 
 //Horizontal Collision
-if (place_meeting(x+hsp,y,obj_m1_wall)) {
-    while(!place_meeting(x+sign(hsp),y,obj_m1_wall)) {
+if (place_meeting(x+hsp,y,obj_m1_wall) || place_meeting(x+hsp,y,obj_m1_playerwall)) {
+    while(!place_meeting(x+sign(hsp),y,obj_m1_wall) &amp;&amp; !place_meeting(x+sign(hsp),y,obj_m1_playerwall)) {
         x += sign(hsp);
     }
     hsp = 0;
 }
 x += hsp;
+
 
 //Vertical Collision
 if (place_meeting(x,y+vsp,obj_m1_wall))

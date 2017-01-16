@@ -90,6 +90,7 @@
     <objects name="grp_m1">
       <object>objects\obj_m1_controller</object>
       <object>objects\obj_m1_wall</object>
+      <object>objects\obj_m1_playerwall</object>
       <object>objects\obj_m1_pp</object>
       <object>objects\obj_m1_p1</object>
       <object>objects\obj_m1_p2</object>

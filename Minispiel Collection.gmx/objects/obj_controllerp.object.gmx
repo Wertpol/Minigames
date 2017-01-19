@@ -29,6 +29,32 @@
 yfade = 540;
 fadeout = false;
 roomid = rom_menu;
+countdownneeded = false;
+if (room != rom_menu &amp;&amp; room != rom_board) {
+    countdownneeded = true;
+    textscale = 10;
+    countdown = 180;
+    global.gamestart = false;
+    message = "Wer killt wen zuerst brutalst(Es gibt noch keine message)";
+    switch(room) {
+        case rom_m1:
+            message = "Don't let the stupid and ugly child get the present on your side!";
+        break;
+        case rom_m2:
+            message = "Don't run into each other's tracks!";
+        break;
+        case rom_m3:
+            message = "Memorise the track and traverse it afterwards!";
+        break;
+        case rom_m4:
+            message = "Turn your wheel around and get to your side!";
+        break;
+        case rom_m5:
+            message = "Who knows!";
+        break;
+    }
+    go = 0;
+}
 </string>
           </argument>
         </arguments>
@@ -59,10 +85,89 @@ if (fadeout == true) {
     view_yview[0] += median(-20,(-540-view_yview[0])/5,20);
     yfade += median(-20,(-540 - yfade)/5,20);
     if (yfade + 540 &gt; -2) {
+        part_particles_clear(global.prt_snow_s);
         room_goto(roomid);
         global.fadeout = false;
     }
 }
+//countdown and instructions
+if (global.gamestart == false &amp;&amp; countdownneeded == true) {
+    countdown--;
+    countscale = ((countdown%60)/60)*3;
+    textscale -= (-(1-textscale))/10;
+    if (countdown &lt;= 0) {
+        global.gamestart = true;
+        go = 60;
+    }
+}
+if (countdownneeded == true) {
+    if (go &gt; 0) {
+        go--;
+        goscale = (go/60)*4;
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="3">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//destroy all temp resources
+part_system_destroy(global.prt_snow_s);
+part_type_destroy(global.prt_snow_t);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//create all temp resources
+//create system
+global.prt_snow_s = part_system_create();
+part_system_depth(global.prt_snow_s, -9999);
+//create type
+global.prt_snow_t = part_type_create();
+part_type_sprite(global.prt_snow_t,spr_m1_snow,false,false,true);
+part_type_speed(global.prt_snow_t, 1, 5, 0, 0);
+part_type_direction(global.prt_snow_t, 260, 280, 0, 0);
+part_type_life(global.prt_snow_t, 1200, 1200);
+//create emitter
+global.prt_snow_e = part_emitter_create(global.prt_snow_s);
+part_emitter_region(global.prt_snow_s, global.prt_snow_e, -200, 2120, 0, 0, ps_shape_line, ps_distr_linear);
+global.prt_snow_e2 = part_emitter_create(global.prt_snow_s);
+part_emitter_region(global.prt_snow_s, global.prt_snow_e2, -200, 2120, 0, 1080, ps_shape_rectangle, ps_distr_linear);
 </string>
           </argument>
         </arguments>
@@ -86,6 +191,25 @@ if (fadeout == true) {
           <argument>
             <kind>1</kind>
             <string>draw_sprite(spr_board_transition,0,0,yfade);
+//countdown and instructions
+if (!global.gamestart &amp;&amp; countdownneeded) {
+    draw_set_halign(fa_center);
+    draw_set_valign(fa_middle);
+    //message
+    draw_set_font(fnt_minigamename);
+    draw_set_alpha(1-((textscale-1)/9));
+    draw_text_transformed(960,200,message,textscale,textscale,0);
+    //countdown
+    draw_sprite_ext(spr_countdown,ceil(countdown/60),960,450,countscale,countscale,0,c_white,((countdown%60)/60));
+    draw_set_alpha(1);
+}
+//go
+if (countdownneeded) {
+    if (go &gt; 0) {
+        draw_sprite_ext(spr_countdown,0,960,450,goscale,goscale,0,c_white,(go/60));
+    }
+}
+
 </string>
           </argument>
         </arguments>
@@ -116,21 +240,28 @@ if (fadeout == true) {
     <event eventtype="9" enumb="27">
       <action>
         <libid>1</libid>
-        <id>224</id>
-        <kind>0</kind>
+        <id>603</id>
+        <kind>7</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_another_room</functionname>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>11</kind>
-            <room>rom_menu</room>
+            <kind>1</kind>
+            <string>if (room == rom_menu) {
+    game_end();
+} else {
+    part_particles_clear(global.prt_snow_s);
+    part_emitter_stream(global.prt_snow_s, global.prt_snow_e, global.prt_snow_t, 0);
+    room_goto(rom_menu);
+}
+</string>
           </argument>
         </arguments>
       </action>

@@ -61,49 +61,50 @@ if (player == 1) {
           <argument>
             <kind>1</kind>
             <string>event_inherited();
-
-//React to inputs
-move = right - left;
-hsp = move * movespeed;
-if (vsp &lt; 30) {
-    vsp += grav;
-}
-
-//flip sprite
-if (move &gt; 0) {
-    image_index = 0;
-} else if (move &lt; 0) {
-    image_index = 1;
-}
-
-if (place_meeting(x,y+1,obj_m1_wall)) {
-    var yumpin = 0;
-    if (action || up) {
-        yumpin = 1;
+if (global.gamestart) {
+    //React to inputs
+    move = right - left;
+    hsp = move * movespeed;
+    if (vsp &lt; 30) {
+        vsp += grav;
     }
-    vsp = yumpin * -jump;
-}
-
-//Horizontal Collision
-if (place_meeting(x+hsp,y,obj_m1_wall) || place_meeting(x+hsp,y,obj_m1_playerwall)) {
-    while(!place_meeting(x+sign(hsp),y,obj_m1_wall) &amp;&amp; !place_meeting(x+sign(hsp),y,obj_m1_playerwall)) {
-        x += sign(hsp);
+    
+    //flip sprite
+    if (move &gt; 0) {
+        image_index = 0;
+    } else if (move &lt; 0) {
+        image_index = 1;
     }
-    hsp = 0;
-}
-x += hsp;
-
-
-//Vertical Collision
-if (place_meeting(x,y+vsp,obj_m1_wall))
-{
-    while(!place_meeting(x,y+sign(vsp),obj_m1_wall))
+    
+    if (place_meeting(x,y+1,obj_m1_wall)) {
+        var yumpin = 0;
+        if (action || up) {
+            yumpin = 1;
+        }
+        vsp = yumpin * -jump;
+    }
+    
+    //Horizontal Collision
+    if (place_meeting(x+hsp,y,obj_m1_wall) || place_meeting(x+hsp,y,obj_m1_playerwall)) {
+        while(!place_meeting(x+sign(hsp),y,obj_m1_wall) &amp;&amp; !place_meeting(x+sign(hsp),y,obj_m1_playerwall)) {
+            x += sign(hsp);
+        }
+        hsp = 0;
+    }
+    x += hsp;
+    
+    
+    //Vertical Collision
+    if (place_meeting(x,y+vsp,obj_m1_wall))
     {
-        y += sign(vsp);
+        while(!place_meeting(x,y+sign(vsp),obj_m1_wall))
+        {
+            y += sign(vsp);
+        }
+        vsp = 0;
     }
-    vsp = 0;
+    y += vsp;
 }
-y += vsp;
 </string>
           </argument>
         </arguments>

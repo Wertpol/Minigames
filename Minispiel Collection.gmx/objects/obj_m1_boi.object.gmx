@@ -57,7 +57,8 @@ image_speed = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_endround(2);
+            <string>part_emitter_stream(global.prt_snow_s, global.prt_snow_e, global.prt_snow_t, 0);
+scr_endround(2);
 </string>
           </argument>
         </arguments>
@@ -80,7 +81,8 @@ image_speed = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_endround(1);
+            <string>part_emitter_stream(global.prt_snow_s, global.prt_snow_e, global.prt_snow_t, 0);
+scr_endround(1);
 </string>
           </argument>
         </arguments>
@@ -173,7 +175,7 @@ image_index = damage;
     hsp = (((x-other.x)/96)*30);
     rotspeed = random_range(4,50);
     other.dead = true;
-    other.sprite_index = spr_m1_kind_kapot;
+    other.sprite_index = spr_m1_kind_present;
 }
 if (x &lt; 960) {
     if (gameover == false) {
@@ -186,6 +188,7 @@ if (x &lt; 960) {
         alarm[2] = 60;
     }
 }
+visible = false;
 </string>
           </argument>
         </arguments>

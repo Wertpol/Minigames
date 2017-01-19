@@ -9,6 +9,7 @@
     <sprite>sprites\spr_wall</sprite>
     <sprite>sprites\spr_startall</sprite>
     <sprite>sprites\spr_board_transition</sprite>
+    <sprite>sprites\spr_countdown</sprite>
     <sprites name="grp_board">
       <sprite>sprites\spr_board_p1</sprite>
       <sprite>sprites\spr_board_p2</sprite>
@@ -22,9 +23,11 @@
       <sprite>sprites\spr_m1_p2</sprite>
       <sprite>sprites\spr_m1_boi</sprite>
       <sprite>sprites\spr_m1_kind</sprite>
+      <sprite>sprites\spr_m1_kind_present</sprite>
       <sprite>sprites\spr_m1_kind_kapot</sprite>
       <sprite>sprites\spr_m1_fence</sprite>
       <sprite>sprites\spr_m1_snow</sprite>
+      <sprite>sprites\spr_m1_smoke</sprite>
     </sprites>
     <sprites name="grp_m2">
       <sprite>sprites\spr_menu_m2</sprite>
@@ -111,6 +114,7 @@
       <object>objects\obj_m1_boi</object>
       <object>objects\obj_m1_kind</object>
       <object>objects\obj_m1_fence</object>
+      <object>objects\obj_m1_smoke</object>
     </objects>
     <objects name="grp_m2">
       <object>objects\obj_m2_controller</object>

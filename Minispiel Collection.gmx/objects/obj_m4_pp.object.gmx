@@ -56,7 +56,7 @@ image_speed = 0;
           <argument>
             <kind>1</kind>
             <string>event_inherited();
-if (obj_m4_controller.pwon == 0 || obj_m4_controller.pwon == player) {
+if ((obj_m4_controller.pwon == 0 || obj_m4_controller.pwon == player) &amp;&amp; global.gamestart) {
     if (player == 1) {
         if (right) {
             if (dir != 0 &amp;&amp; dir != 180) {

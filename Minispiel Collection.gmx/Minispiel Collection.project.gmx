@@ -18,7 +18,7 @@
       <sprite>sprites\spr_board_planchette</sprite>
     </sprites>
     <sprites name="grp_m1">
-      <sprite>sprites\spr_menu_start</sprite>
+      <sprite>sprites\spr_menu_m1</sprite>
       <sprite>sprites\spr_m1_p1</sprite>
       <sprite>sprites\spr_m1_p2</sprite>
       <sprite>sprites\spr_m1_boi</sprite>
@@ -69,8 +69,11 @@
       <sprite>sprites\spr_m5_purpledrop</sprite>
     </sprites>
     <sprite>sprites\scheiss_sarah_thiery</sprite>
+    <sprite>sprites\spr_menu_start</sprite>
+    <sprite>sprites\spr_menu_rounds</sprite>
   </sprites>
   <backgrounds name="background">
+    <background>background\bac_menu</background>
     <background>background\bac_board</background>
     <background>background\bac_m1</background>
     <background>background\bac_m2</background>
@@ -96,6 +99,10 @@
     <object>objects\obj_start_m5</object>
     <object>objects\obj_startall</object>
     <object>objects\obj_mp</object>
+    <objects name="grp_menu">
+      <object>objects\obj_menu_start</object>
+      <object>objects\obj_menu_rounds</object>
+    </objects>
     <objects name="grp_board">
       <object>objects\obj_board_p1</object>
       <object>objects\obj_board_p2</object>

@@ -25,8 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>gravity = 1;
-hspeed = 10;
+            <string>hspeed = 10;
 
 </string>
           </argument>
@@ -50,9 +49,9 @@ hspeed = 10;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if place_meeting(x,y, obj_m3_up) vspeed = -5;
-//if place_meeting(x,y, obj_m3_down);
-if place_meeting(x,y, obj_m3_action) hspeed += 10;
+            <string>/*if place_meeting(x,y, obj_m3_up);
+if place_meeting(x,y, obj_m3_down);
+if place_meeting(x,y, obj_m3_action);*/
 
 </string>
           </argument>

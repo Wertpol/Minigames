@@ -109,11 +109,11 @@
   </fonts>
   <objects name="objects">
     <object>objects\obj_controllerp</object>
-    <object>objects\obj_controller</object>
     <object>objects\obj_btnp</object>
     <object>objects\obj_mp</object>
     <object>objects\obj_win_controller</object>
     <objects name="grp_menu">
+      <object>objects\obj_controller</object>
       <object>objects\obj_menu_start</object>
       <object>objects\obj_menu_rounds</object>
       <object>objects\obj_menu_settings</object>

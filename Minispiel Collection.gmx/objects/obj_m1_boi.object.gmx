@@ -180,12 +180,12 @@ image_index = damage;
 if (x &lt; 960) {
     if (gameover == false) {
         gameover = true;
-        alarm[1] = 60;
+        alarm[2] = 60;
     }
 } else {
     if (gameover == false) {
         gameover = true;
-        alarm[2] = 60;
+        alarm[1] = 60;
     }
 }
 visible = false;

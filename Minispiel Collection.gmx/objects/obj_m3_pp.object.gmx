@@ -27,16 +27,248 @@
             <kind>1</kind>
             <string>event_inherited();
 
-movespeed = 14;
-grav = 1;
-hsp = 0;
-vsp = 0;
-jump = 30;
-image_speed = 0;
-if (player == 1) {
-    image_index = 0;
+image_speed = 0.2
+timermax = 60;
+jump = false;
+duck = false;
+kick = false;
+timer = timermax;
+dead = false;
+depth = -y;
+gobo = true;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>scr_endround(2);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>scr_endround(1);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (!dead &amp;&amp; global.gamestart) {
+    event_inherited();
+    image_speed = 0.2 * obj_m3_controller.spd;
+
+    if (!jump &amp;&amp; !duck &amp;&amp; !kick) {
+        //jump
+        if (upPressed) {
+            timer = timermax;
+            jump = true;
+        }
+        //duck
+        if (downPressed) {
+            timer = timermax;
+            duck = true;
+        }
+        //kick
+        if (actionPressed or rightPressed) {
+            timer = timermax;
+            kick = true;
+        }
+        if (player == 1) {
+            sprite_index = spr_m3_p1;
+        } else {
+            sprite_index = spr_m3_p2;
+        }
+    }
+    
+    if (jump) {
+        timer -= obj_m3_controller.spd
+        if (timer &lt;= 0) {
+            jump = false;
+        }
+        if (player == 1) {
+            sprite_index = spr_m3_p1_jump;
+        } else {
+            sprite_index = spr_m3_p2_jump;
+        }
+    }
+    
+    if (duck) {
+        timer -= obj_m3_controller.spd
+        if (timer &lt;= 0) {
+            duck = false;
+        }
+        if (player == 1) {
+            sprite_index = spr_m3_p1_duck;
+        } else {
+            sprite_index = spr_m3_p2_duck;
+        }
+    }
+    
+    if (kick) {
+        timer -= obj_m3_controller.spd
+        if (timer &lt;= 0) {
+            kick = false;
+        }
+        if (player == 1) {
+            sprite_index = spr_m3_p1_kick;
+        } else {
+            sprite_index = spr_m3_p2_kick;
+        }
+    }
+}
+if (dead) {
+    hspeed =  -10 * obj_m3_controller.spd;
+    if (gobo) {
+        gobo = false;
+        if (player == 1) {
+            alarm[2] = 60;
+        } else {
+            alarm[1] = 60;
+        }
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_m3_kick">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (!kick) {
+    dead = true;
+    if (player == 1) {
+        sprite_index = spr_m3_p1_electrified;
+    } else {
+        sprite_index = spr_m3_p2_electrified;
+    }
 } else {
-    image_index = 1;
+    other.sprite_index = spr_m3_kickbroken;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_m3_duck">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (!duck) {
+    dead = true;
+    if (player == 1) {
+        sprite_index = spr_m3_p1_electrified;
+    } else {
+        sprite_index = spr_m3_p2_electrified;
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_m3_jump">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (!jump) {
+    dead = true;
+    if (player == 1) {
+        sprite_index = spr_m3_p1_electrified;
+    } else {
+        sprite_index = spr_m3_p2_electrified;
+    }
 }
 </string>
           </argument>

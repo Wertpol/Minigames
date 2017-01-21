@@ -27,24 +27,54 @@
             <kind>1</kind>
             <string>event_inherited();
 
-instance_create(500,980,obj_m3_runner);
-
-for(i = 2; i &lt; 9; i++){
-
-    k = irandom_range(0,2);
-    
-    if(k == 0){
-        instance_create(960 * i, 0, obj_m3_up);
+spd = 1;
+frequency = 100;
+timer = 0;
+background_hspeed[0] = -10
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>event_inherited();
+if (global.gamestart) {
+    spd += 0.001;
+    background_hspeed[0] = -10 * spd;
+    timer += spd;
+    if (timer &gt;= frequency) {
+        timer = 0;
+        var bobo = floor(random(3));
+        switch (bobo) {
+            case 0:
+                instance_create(2213,1080,obj_m3_jump);
+            break;
+            case 1:
+                instance_create(2365,928,obj_m3_duck);
+                instance_create(2213,1080,obj_m3_duck);
+            break;
+            case 2:
+                instance_create(2365,928,obj_m3_kick);
+                instance_create(2213,1080,obj_m3_kick);
+            break;
+        }
     }
-    
-    if(k == 1){
-        instance_create(960 * i, 0, obj_m3_down);
-    }
-    
-    if(k == 2){
-        instance_create(960 * i, 0, obj_m3_action);
-    }
-    
 }
 </string>
           </argument>

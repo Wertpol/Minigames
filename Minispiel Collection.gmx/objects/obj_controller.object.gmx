@@ -38,6 +38,7 @@ global.p2wins = 0;
 global.gamecount = 4;
 global.nextgame = ceil(random(global.gamecount));
 global.gamestart = false;
+global.volume = 10;
 
 global.p1Left = ord('A');
 global.p1Right = ord('D');
@@ -50,6 +51,7 @@ global.p2Up = vk_up;
 global.p2Down = vk_down;
 global.p2Action = vk_enter;
 
+global.texts[0] = "TIME FOR THE RESULTS";
 global.texts[1] = "SNEEMANN ODER SO";
 global.texts[2] = "KURVE DIE ACHTUNG";
 global.texts[3] = "MAZERUNNER";

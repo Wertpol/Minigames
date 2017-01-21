@@ -30,7 +30,7 @@ yfade = 540;
 fadeout = false;
 roomid = rom_menu;
 countdownneeded = false;
-if (room != rom_menu &amp;&amp; room != rom_board) {
+if (room != rom_menu &amp;&amp; room != rom_board &amp;&amp; room != rom_win_p1 &amp;&amp; room != rom_win_p2 &amp;&amp; room != rom_win_tie) {
     countdownneeded = true;
     textscale = 10;
     countdown = 180;
@@ -44,7 +44,7 @@ if (room != rom_menu &amp;&amp; room != rom_board) {
             message = "Don't run into each other's tracks!";
         break;
         case rom_m3:
-            message = "Memorise the track and traverse it afterwards!";
+            message = "Jump, kick and slide to avoid the obstacles!";
         break;
         case rom_m4:
             message = "Turn your wheel around and get to your side!";

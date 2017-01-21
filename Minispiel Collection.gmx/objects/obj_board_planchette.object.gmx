@@ -114,6 +114,15 @@ yletters[26] = 905;
         fadeout = true;
         global.fadeout = true;
         switch (global.nextgame) {
+            case 0: 
+                if (global.p1wins &gt; global.p2wins) {
+                    roomid = rom_win_p1;
+                } else if (global.p1wins &lt; global.p2wins) {
+                    roomid = rom_win_p2;
+                } else {
+                    roomid = rom_win_tie;
+                }
+            break;
             case 1: 
                 roomid = rom_m1;
             break;
@@ -153,7 +162,7 @@ yletters[26] = 905;
           <argument>
             <kind>1</kind>
             <string>if (active == true) {
-    move_towards_point(xletters[letterid],yletters[letterid],point_distance(x,y,xletters[letterid],yletters[letterid])/3);
+    move_towards_point(xletters[letterid],yletters[letterid],point_distance(x,y,xletters[letterid],yletters[letterid])/2);
     if (point_distance(x,y,xletters[letterid],yletters[letterid]) &lt; 2) {
         //run this everytime a new letter comes up
         textcounter++;

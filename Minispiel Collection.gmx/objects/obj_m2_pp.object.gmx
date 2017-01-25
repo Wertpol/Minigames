@@ -105,10 +105,11 @@ if(player == 2 &amp;&amp; action){
 
 }
 
+
 //Spawn tail
 
-
-/*randomCount++;
+/*
+randomCount++;
 randomCount2++;
 
 frameCount++;
@@ -145,6 +146,7 @@ if(randomCount2 == 250){
     randomCount2 = irandom_range(0,150);
 }
 */
+
 </string>
           </argument>
         </arguments>

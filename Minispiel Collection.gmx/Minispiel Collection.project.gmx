@@ -35,6 +35,7 @@
       <sprite>sprites\spr_m2_p2</sprite>
       <sprite>sprites\spr_m2_p1_tail</sprite>
       <sprite>sprites\spr_m2_p2_tail</sprite>
+      <sprite>sprites\spr_m2_test</sprite>
     </sprites>
     <sprites name="grp_m3">
       <sprite>sprites\spr_menu_m3</sprite>
@@ -158,6 +159,8 @@
       <object>objects\obj_m2_tailp</object>
       <object>objects\obj_m2_p1_tail</object>
       <object>objects\obj_m2_p2_tail</object>
+      <object>objects\obj_m2_test</object>
+      <object>objects\obj_m2_item_spawn</object>
     </objects>
     <objects name="grp_m3">
       <object>objects\obj_m3_controller</object>

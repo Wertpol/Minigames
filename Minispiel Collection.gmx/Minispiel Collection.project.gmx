@@ -48,7 +48,7 @@
       <sprite>sprites\spr_m2_p2</sprite>
       <sprite>sprites\spr_m2_p1_tail</sprite>
       <sprite>sprites\spr_m2_p2_tail</sprite>
-      <sprite>sprites\spr_m2_test</sprite>
+      <sprite>sprites\spr_m2_item_blau</sprite>
     </sprites>
     <sprites name="grp_m3">
       <sprite>sprites\spr_menu_m3</sprite>

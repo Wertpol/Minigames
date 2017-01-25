@@ -28,9 +28,18 @@
             <string>event_inherited();
 
 frames = 3;
+
+
+
+//useless
 frameCount = 1;
 randomCount = 0;
 randomCount2 = 50;
+//useless
+
+
+counter1 = 0;
+counter2 = 0;
 spd = 5;
 turnspeed = 5;
 image_angle = irandom_range(0,360);
@@ -87,7 +96,7 @@ if(y &lt; - 16){
     y += room_height + 32;
 }
 
-if(player == 1 &amp;&amp; action){
+/*if(player == 1 &amp;&amp; action){
 
     tail = instance_create(x,y,obj_m2_p1_tail);
             with tail{
@@ -103,6 +112,28 @@ if(player == 2 &amp;&amp; action){
                 image_angle = other.image_angle;   
             }
 
+}*/
+
+
+if(place_meeting(x,y,obj_m2_test) || counter1 &gt; 0 || counter2 &gt; 0){
+    if (player == 1) {
+            counter1++;
+            tail = instance_create(x,y,obj_m2_p1_tail);
+            with tail{
+                image_angle = other.image_angle;  
+                image_blend = c_blue; 
+            }
+    }else{
+            counter2++;
+            tail = instance_create(x,y,obj_m2_p2_tail);
+            with tail{
+                image_angle = other.image_angle;
+                image_blend = c_blue;    
+            }
+    }
+    
+    if(counter1 == 60) counter1 = 0;
+    if(counter2 == 60) counter2 = 0;
 }
 
 

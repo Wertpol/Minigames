@@ -35,10 +35,9 @@ global.currentround = 1;
 global.winner = 0;
 global.p1wins = 0;
 global.p2wins = 0;
-global.gamecount = 4;
+global.gamecount = 6;
 global.nextgame = ceil(random(global.gamecount));
 global.gamestart = false;
-global.volume = 10;
 
 global.p1Left = ord('A');
 global.p1Right = ord('D');
@@ -56,6 +55,8 @@ global.texts[1] = "SNEEMANN ODER SO";
 global.texts[2] = "KURVE DIE ACHTUNG";
 global.texts[3] = "MAZERUNNER";
 global.texts[4] = "STEILE CRANKEN WAS DAS ZEUG HAELT";
+global.texts[5] = "JUICEN";
+global.texts[6] = "SAUCE EDGE";
 </string>
           </argument>
         </arguments>

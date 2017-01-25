@@ -4,7 +4,20 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sounds name="grp_m3">
+      <sound>sound\snd_m3_jump</sound>
+      <sound>sound\snd_m3_duck</sound>
+      <sound>sound\snd_m3_kick</sound>
+      <sound>sound\snd_m3_shock</sound>
+    </sounds>
+    <sounds name="grp_m6">
+      <sound>sound\snd_m6_music</sound>
+      <sound>sound\snd_m6_sausage</sound>
+      <sound>sound\snd_m6_good</sound>
+      <sound>sound\snd_m6_bad</sound>
+    </sounds>
+  </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_wall</sprite>
     <sprite>sprites\spr_startall</sprite>
@@ -81,12 +94,21 @@
       <sprite>sprites\spr_m5_greendrop</sprite>
       <sprite>sprites\spr_m5_purpledrop</sprite>
     </sprites>
+    <sprites name="grp_m6">
+      <sprite>sprites\spr_menu_m6</sprite>
+      <sprite>sprites\spr_m6_p1</sprite>
+      <sprite>sprites\spr_m6_p2</sprite>
+      <sprite>sprites\spr_m6_sausage</sprite>
+      <sprite>sprites\spr_m6_wuascht</sprite>
+      <sprite>sprites\spr_m6_nomore</sprite>
+    </sprites>
     <sprite>sprites\scheiss_sarah_thiery</sprite>
     <sprite>sprites\spr_menu_start</sprite>
     <sprite>sprites\spr_menu_rounds</sprite>
     <sprite>sprites\spr_menu_settings</sprite>
     <sprite>sprites\spr_menu_settings2</sprite>
     <sprite>sprites\spr_blank</sprite>
+    <sprite>sprites\spr_fnt_pixel</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bac_menu</background>
@@ -96,6 +118,7 @@
     <background>background\bac_m3</background>
     <background>background\bac_m4</background>
     <background>background\bac_m5</background>
+    <background>background\bac_m6</background>
     <background>background\bac_p1win</background>
     <background>background\bac_p2win</background>
     <background>background\bac_tie</background>
@@ -130,6 +153,7 @@
       <object>objects\obj_start_m3</object>
       <object>objects\obj_start_m4</object>
       <object>objects\obj_start_m5</object>
+      <object>objects\obj_start_m6</object>
     </objects>
     <objects name="grp_board">
       <object>objects\obj_board_p1</object>
@@ -197,6 +221,13 @@
       <object>objects\obj_m5_greendrop</object>
       <object>objects\obj_m5_purpledrop</object>
     </objects>
+    <objects name="grp_m6">
+      <object>objects\obj_m6_controller</object>
+      <object>objects\obj_m6_pp</object>
+      <object>objects\obj_m6_p1</object>
+      <object>objects\obj_m6_p2</object>
+      <object>objects\obj_m6_wuascht</object>
+    </objects>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\tln_board</timeline>
@@ -209,6 +240,7 @@
     <room>rooms\rom_m3</room>
     <room>rooms\rom_m4</room>
     <room>rooms\rom_m5</room>
+    <room>rooms\rom_m6</room>
     <room>rooms\rom_win_p1</room>
     <room>rooms\rom_win_p2</room>
     <room>rooms\rom_win_tie</room>

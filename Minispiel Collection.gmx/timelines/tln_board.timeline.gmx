@@ -77,7 +77,11 @@ if (global.currentround == 1) {
     obj_board_p2.image_index = 0;
 }
 if (gameover == false) {
+    notthis = global.nextgame;
     global.nextgame = ceil(random(global.gamecount));
+    while (global.nextgame == 5 || global.nextgame == notthis) {
+        global.nextgame = ceil(random(global.gamecount));
+    }
 } else {
     global.nextgame = 0;
 }

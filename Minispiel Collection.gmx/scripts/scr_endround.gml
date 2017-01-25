@@ -8,6 +8,7 @@ with (obj_controllerp) {
         } else if (argument[0] == 2) {
             global.p2wins++;
         }
+        global.currentround++;
         global.fadeout = true;
         if (global.gamemode == 1) {
             roomid = rom_menu;
@@ -15,5 +16,6 @@ with (obj_controllerp) {
             roomid = rom_board;
         }
         yfade = -1240;
+        audio_stop_all();
     }
 }

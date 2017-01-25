@@ -135,6 +135,12 @@ yletters[26] = 905;
             case 4: 
                 roomid = rom_m4;
             break;
+            case 5: 
+                roomid = rom_m5;
+            break;
+            case 6: 
+                roomid = rom_m6;
+            break;
         }
         yfade = -1240;
     }

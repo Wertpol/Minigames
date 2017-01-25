@@ -113,16 +113,19 @@ gobo = true;
         if (upPressed) {
             timer = timermax;
             jump = true;
+            audio_play_sound(snd_m3_jump,1,false);
         }
         //duck
         if (downPressed) {
             timer = timermax;
             duck = true;
+            audio_play_sound(snd_m3_duck,1,false);
         }
         //kick
         if (actionPressed or rightPressed) {
             timer = timermax;
             kick = true;
+            audio_play_sound(snd_m3_kick,1,false);
         }
         if (player == 1) {
             sprite_index = spr_m3_p1;
@@ -234,6 +237,9 @@ if (dead) {
             <kind>1</kind>
             <string>if (!duck) {
     dead = true;
+    if (!audio_is_playing(snd_m3_shock)) {
+        audio_play_sound(snd_m3_shock,1,false);
+    }
     if (player == 1) {
         sprite_index = spr_m3_p1_electrified;
     } else {
@@ -264,6 +270,9 @@ if (dead) {
             <kind>1</kind>
             <string>if (!jump) {
     dead = true;
+    if (!audio_is_playing(snd_m3_shock)) {
+        audio_play_sound(snd_m3_shock,1,false);
+    }
     if (player == 1) {
         sprite_index = spr_m3_p1_electrified;
     } else {

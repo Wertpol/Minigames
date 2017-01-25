@@ -52,6 +52,9 @@ if (room != rom_menu &amp;&amp; room != rom_board &amp;&amp; room != rom_win_p1 
         case rom_m5:
             message = "Who knows!";
         break;
+        case rom_m6:
+            message = "Get the sausages as soon as two of them are the same!";
+        break;
     }
     go = 0;
 }
@@ -131,6 +134,7 @@ if (countdownneeded == true) {
             <string>//destroy all temp resources
 part_system_destroy(global.prt_snow_s);
 part_type_destroy(global.prt_snow_t);
+font_delete(global.fnt_pixel);
 </string>
           </argument>
         </arguments>
@@ -168,6 +172,11 @@ global.prt_snow_e = part_emitter_create(global.prt_snow_s);
 part_emitter_region(global.prt_snow_s, global.prt_snow_e, -200, 2120, 0, 0, ps_shape_line, ps_distr_linear);
 global.prt_snow_e2 = part_emitter_create(global.prt_snow_s);
 part_emitter_region(global.prt_snow_s, global.prt_snow_e2, -200, 2120, 0, 1080, ps_shape_rectangle, ps_distr_linear);
+
+//create pixelfont
+global.fnt_pixel = font_add_sprite_ext(spr_fnt_pixel,"0123456789",true,0);
+
+global.volume = 10;
 </string>
           </argument>
         </arguments>
@@ -198,7 +207,14 @@ if (!global.gamestart &amp;&amp; countdownneeded) {
     //message
     draw_set_font(fnt_minigamename);
     draw_set_alpha(1-((textscale-1)/9));
+    if (room == rom_m6) {
+        draw_set_colour(c_black);
+    }
     draw_text_transformed(960,200,message,textscale,textscale,0);
+    if (room == rom_m6) {
+        draw_set_colour(c_white);
+    }
+    
     //countdown
     draw_sprite_ext(spr_countdown,ceil(countdown/60),960,450,countscale,countscale,0,c_white,((countdown%60)/60));
     draw_set_alpha(1);

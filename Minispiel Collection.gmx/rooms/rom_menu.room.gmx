@@ -61,12 +61,12 @@
     <instance objName="obj_menu_soundbuttons" x="1172" y="246" name="inst_BD388FD8" locked="0" code="" scaleX="6.38000011444092" scaleY="1.125" colour="4294967295" rotation="0"/>
     <instance objName="obj_menu_fullscreen" x="1339" y="319" name="inst_DE1A8DAA" locked="0" code="" scaleX="1.1599999666214" scaleY="1.19354844093323" colour="4294967295" rotation="0"/>
     <instance objName="obj_menu_quit" x="857" y="950" name="inst_11BE775C" locked="0" code="" scaleX="7.93548393249512" scaleY="2.22000002861023" colour="4294967295" rotation="0"/>
-    <instance objName="obj_start" x="220" y="503" name="inst_255DF777" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_start_m2" x="531" y="502" name="inst_CFE6AAB2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_start_m3" x="838" y="500" name="inst_11FA02D0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_start_m4" x="1149" y="496" name="inst_D5A54D83" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_start_m5" x="1460" y="495" name="inst_68AC9168" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_start_m6" x="842" y="610" name="inst_9307E663" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_start" x="506" y="488" name="inst_255DF777" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_start_m2" x="836" y="490" name="inst_CFE6AAB2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_start_m3" x="1160" y="490" name="inst_11FA02D0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_start_m4" x="506" y="616" name="inst_D5A54D83" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_start_m5" x="835" y="618" name="inst_68AC9168" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_start_m6" x="1163" y="618" name="inst_9307E663" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

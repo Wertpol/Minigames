@@ -6,6 +6,7 @@
   <NewExtensions/>
   <sounds name="sound">
     <sounds name="grp_m3">
+      <sound>sound\snd_m3_music</sound>
       <sound>sound\snd_m3_jump</sound>
       <sound>sound\snd_m3_duck</sound>
       <sound>sound\snd_m3_kick</sound>
@@ -32,6 +33,7 @@
     </sprites>
     <sprites name="grp_m1">
       <sprite>sprites\spr_menu_m1</sprite>
+      <sprite>sprites\spr_menu_m1_lame</sprite>
       <sprite>sprites\spr_m1_p1</sprite>
       <sprite>sprites\spr_m1_p2</sprite>
       <sprite>sprites\spr_m1_boi</sprite>
@@ -44,6 +46,7 @@
     </sprites>
     <sprites name="grp_m2">
       <sprite>sprites\spr_menu_m2</sprite>
+      <sprite>sprites\spr_menu_m2_lame</sprite>
       <sprite>sprites\spr_m2_p1</sprite>
       <sprite>sprites\spr_m2_p2</sprite>
       <sprite>sprites\spr_m2_p1_tail</sprite>
@@ -52,6 +55,7 @@
     </sprites>
     <sprites name="grp_m3">
       <sprite>sprites\spr_menu_m3</sprite>
+      <sprite>sprites\spr_menu_m3_lame</sprite>
       <sprite>sprites\spr_m3_p1</sprite>
       <sprite>sprites\spr_m3_p1_jump</sprite>
       <sprite>sprites\spr_m3_p1_duck</sprite>
@@ -72,6 +76,7 @@
     </sprites>
     <sprites name="grp_m4">
       <sprite>sprites\spr_menu_m4</sprite>
+      <sprite>sprites\spr_menu_m4_lame</sprite>
       <sprite>sprites\spr_m4_p1</sprite>
       <sprite>sprites\spr_m4_p2</sprite>
       <sprite>sprites\spr_m4_smallwheel</sprite>
@@ -83,6 +88,7 @@
     </sprites>
     <sprites name="grp_m5">
       <sprite>sprites\spr_menu_m5</sprite>
+      <sprite>sprites\spr_menu_m5_lame</sprite>
       <sprite>sprites\spr_m5_p1</sprite>
       <sprite>sprites\spr_m5_p2</sprite>
       <sprite>sprites\spr_m5_pipes</sprite>
@@ -96,6 +102,7 @@
     </sprites>
     <sprites name="grp_m6">
       <sprite>sprites\spr_menu_m6</sprite>
+      <sprite>sprites\spr_menu_m6_lame</sprite>
       <sprite>sprites\spr_m6_p1</sprite>
       <sprite>sprites\spr_m6_p2</sprite>
       <sprite>sprites\spr_m6_sausage</sprite>

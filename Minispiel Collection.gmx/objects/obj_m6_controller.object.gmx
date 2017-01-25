@@ -35,6 +35,7 @@ p1points = 0;
 p2points = 0;
 globo = 0;
 count2 = 0;
+types[0] = 0;
 audio_play_sound(snd_m6_music,2,true);
 </string>
           </argument>

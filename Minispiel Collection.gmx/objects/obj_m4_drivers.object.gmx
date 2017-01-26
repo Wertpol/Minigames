@@ -155,6 +155,7 @@ if ((x &lt; 0) || (x &gt; 1920)) {
         pwon = 1;
     }
 }
+audio_play_sound(snd_m4_verloren,1,false);
 with (other) {
     instance_destroy();
 }

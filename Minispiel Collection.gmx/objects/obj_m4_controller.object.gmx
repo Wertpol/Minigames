@@ -28,6 +28,7 @@
             <string>event_inherited();
 alarm[3] = 1200;
 pwon = 0;
+audio_play_sound(snd_m4_music,2,true);
 </string>
           </argument>
         </arguments>
@@ -52,6 +53,7 @@ pwon = 0;
             <kind>1</kind>
             <string>instance_create(64+floor(random(1792)),-64,obj_m4_rock);
 alarm[3] = floor(random_range(180,300));
+audio_play_sound(snd_m4_debris,1,false);
 </string>
           </argument>
         </arguments>

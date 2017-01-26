@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>event_inherited();
-
+audio_play_sound(snd_m1_music,2,true);
 part_emitter_stream(global.prt_snow_s, global.prt_snow_e, global.prt_snow_t, 3);
 part_emitter_burst(global.prt_snow_s, global.prt_snow_e2, global.prt_snow_t, 1000)
 </string>

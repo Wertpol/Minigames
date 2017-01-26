@@ -30,6 +30,7 @@ frequency = 1;
 alarm[1] = 240;
 alarm[0] = 300;
 stopspawn = 0;
+audio_play_sound(snd_m4_rock,1,false);
 </string>
           </argument>
         </arguments>

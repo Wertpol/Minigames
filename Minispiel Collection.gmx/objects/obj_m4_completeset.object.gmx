@@ -33,6 +33,7 @@ if (x &lt; 100) {
     x = 1920;
 }
 alarm[0] = 60;
+audio_play_sound(snd_m4_falling,1,false);
 </string>
           </argument>
         </arguments>

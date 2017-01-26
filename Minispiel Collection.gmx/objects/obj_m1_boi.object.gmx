@@ -189,6 +189,7 @@ if (x &lt; 960) {
     }
 }
 visible = false;
+audio_play_sound(snd_m1_lose,1,false);
 </string>
           </argument>
         </arguments>
@@ -211,7 +212,10 @@ visible = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (other.player == 1) {
+            <string>if (!audio_is_playing(snd_m1_ball)) {
+    audio_play_sound(snd_m1_ball,1,false);
+}
+if (other.player == 1) {
     rot = false;
 }
 if (other.player == 2) {

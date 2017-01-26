@@ -24,6 +24,9 @@
       <sound>sound\snd_m2_crash</sound>
       <sound>sound\snd_m2_getItem</sound>
     </sounds>
+    <sounds name="grp_menu_und_andere_sachen_muss_eh_der_rohbert_maken">
+      <sound>sound\snd_menu_music</sound>
+    </sounds>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_wall</sprite>

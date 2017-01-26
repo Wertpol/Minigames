@@ -61,6 +61,9 @@ if (player == 1) {
           <argument>
             <kind>1</kind>
             <string>event_inherited();
+
+
+
 if (global.gamestart) {
     //React to inputs
     move = right - left;

@@ -31,6 +31,7 @@ spd = 1;
 frequency = 100;
 timer = 0;
 background_hspeed[0] = -10
+audio_play_sound(snd_m3_music,2,true);
 </string>
           </argument>
         </arguments>

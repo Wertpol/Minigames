@@ -52,6 +52,9 @@
       <sprite>sprites\spr_m2_p1_tail</sprite>
       <sprite>sprites\spr_m2_p2_tail</sprite>
       <sprite>sprites\spr_m2_item_blau</sprite>
+      <sprite>sprites\spr_m2_item_karotte</sprite>
+      <sprite>sprites\spr_m2_item_zwerg</sprite>
+      <sprite>sprites\spr_m2_item_grass</sprite>
     </sprites>
     <sprites name="grp_m3">
       <sprite>sprites\spr_menu_m3</sprite>
@@ -191,6 +194,9 @@
       <object>objects\obj_m2_p1_tail</object>
       <object>objects\obj_m2_p2_tail</object>
       <object>objects\obj_m2_test</object>
+      <object>objects\obj_m2_karotte</object>
+      <object>objects\obj_m2_grass</object>
+      <object>objects\obj_m2_zwerg</object>
       <object>objects\obj_m2_item_spawn</object>
     </objects>
     <objects name="grp_m3">

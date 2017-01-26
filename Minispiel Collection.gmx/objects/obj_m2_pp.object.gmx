@@ -38,8 +38,18 @@ randomCount2 = 50;
 //useless
 
 
-counter1 = 0;
-counter2 = 0;
+counterBlau1 = 0;
+counterBlau2 = 0;
+
+counterKarotte1 = 0;
+counterKarotte2 = 0;
+
+counterZwerg1 = 0;
+counterZwerg2 = 0;
+
+counterGrass1 = 0;
+counterGrass2 = 0;
+
 spd = 5;
 turnspeed = 5;
 image_angle = irandom_range(0,360);
@@ -65,7 +75,8 @@ image_angle = irandom_range(0,360);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>event_inherited();
+            <string>if(global.gamestart){
+event_inherited();
 
 //continues movement
 motion_set(image_angle, spd);
@@ -115,16 +126,17 @@ if(player == 2 &amp;&amp; action){
 }*/
 
 
-if(place_meeting(x,y,obj_m2_test) || counter1 &gt; 0 || counter2 &gt; 0){
+if(place_meeting(x,y,obj_m2_test) || counterBlau1 &gt; 0 || counterBlau2 &gt; 0){
+
     if (player == 1) {
-            counter1++;
+            counterBlau1++;
             tail = instance_create(x,y,obj_m2_p1_tail);
             with tail{
                 image_angle = other.image_angle;  
                 image_blend = c_blue; 
             }
     }else{
-            counter2++;
+            counterBlau2++;
             tail = instance_create(x,y,obj_m2_p2_tail);
             with tail{
                 image_angle = other.image_angle;
@@ -132,9 +144,77 @@ if(place_meeting(x,y,obj_m2_test) || counter1 &gt; 0 || counter2 &gt; 0){
             }
     }
     
-    if(counter1 == 60) counter1 = 0;
-    if(counter2 == 60) counter2 = 0;
+    if(counterBlau1 == 60) counterBlau1 = 0;
+    if(counterBlau2 == 60) counterBlau2 = 0;
 }
+
+
+if(place_meeting(x,y,obj_m2_karotte) || counterKarotte1 &gt; 0 || counterKarotte2 &gt; 0){
+
+    if (player == 1) {
+            counterKarotte1++;
+            tail = instance_create(x,y,obj_m2_p1_tail);
+            with tail{
+                image_angle = other.image_angle;  
+                image_blend = c_orange; 
+            }
+    }else{
+            counterKarotte2++;
+            tail = instance_create(x,y,obj_m2_p2_tail);
+            with tail{
+                image_angle = other.image_angle;
+                image_blend = c_orange;    
+            }
+    }
+    
+    if(counterKarotte1 == 60) counterKarotte1 = 0;
+    if(counterKarotte2 == 60) counterKarotte2 = 0;
+}
+
+if(place_meeting(x,y,obj_m2_zwerg) || counterZwerg1 &gt; 0 || counterZwerg2 &gt; 0){
+
+    if (player == 1) {
+            counterZwerg1++;
+            tail = instance_create(x,y,obj_m2_p1_tail);
+            with tail{
+                image_angle = other.image_angle;  
+                image_blend = c_red; 
+            }
+    }else{
+            counterZwerg2++;
+            tail = instance_create(x,y,obj_m2_p2_tail);
+            with tail{
+                image_angle = other.image_angle;
+                image_blend = c_red;    
+            }
+    }
+    
+    if(counterZwerg1 == 60) counterZwerg1 = 0;
+    if(counterZwerg2 == 60) counterZwerg2 = 0;
+}
+
+if(place_meeting(x,y,obj_m2_grass) || counterGrass1 &gt; 0 || counterGrass2 &gt; 0){
+
+    if (player == 1) {
+            counterGrass1++;
+            tail = instance_create(x,y,obj_m2_p1_tail);
+            with tail{
+                image_angle = other.image_angle;  
+                image_blend = c_green; 
+            }
+    }else{
+            counterGrass2++;
+            tail = instance_create(x,y,obj_m2_p2_tail);
+            with tail{
+                image_angle = other.image_angle;
+                image_blend = c_green;    
+            }
+    }
+    
+    if(counterGrass1 == 60) counterGrass1 = 0;
+    if(counterGrass2 == 60) counterGrass2 = 0;
+}
+
 
 
 //Spawn tail
@@ -177,7 +257,7 @@ if(randomCount2 == 250){
     randomCount2 = irandom_range(0,150);
 }
 */
-
+}
 </string>
           </argument>
         </arguments>

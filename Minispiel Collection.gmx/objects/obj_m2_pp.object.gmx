@@ -76,9 +76,6 @@ image_angle = irandom_range(0,360);
           <argument>
             <kind>1</kind>
             <string>if(global.gamestart){
-
-draw_text(32, 32, "FPS = " + string(fps));
-
 event_inherited();
 
 //continues movement

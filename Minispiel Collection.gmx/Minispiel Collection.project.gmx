@@ -5,6 +5,11 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound">
+    <sounds name="grp_m1">
+      <sound>sound\snd_m1_music</sound>
+      <sound>sound\snd_m1_ball</sound>
+      <sound>sound\snd_m1_lose</sound>
+    </sounds>
     <sounds name="grp_m3">
       <sound>sound\snd_m3_music</sound>
       <sound>sound\snd_m3_jump</sound>
@@ -12,11 +17,23 @@
       <sound>sound\snd_m3_kick</sound>
       <sound>sound\snd_m3_shock</sound>
     </sounds>
+    <sounds name="grp_m4">
+      <sound>sound\snd_m4_music</sound>
+      <sound>sound\snd_m4_falling</sound>
+      <sound>sound\snd_m4_rock</sound>
+      <sound>sound\snd_m4_debris</sound>
+      <sound>sound\snd_m4_verloren</sound>
+    </sounds>
     <sounds name="grp_m6">
       <sound>sound\snd_m6_music</sound>
       <sound>sound\snd_m6_sausage</sound>
       <sound>sound\snd_m6_good</sound>
       <sound>sound\snd_m6_bad</sound>
+    </sounds>
+    <sounds name="grp_misc">
+      <sound>sound\snd_transition</sound>
+      <sound>sound\snd_hover</sound>
+      <sound>sound\snd_click</sound>
     </sounds>
   </sounds>
   <sprites name="sprites">

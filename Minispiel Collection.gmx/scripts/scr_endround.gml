@@ -17,5 +17,6 @@ with (obj_controllerp) {
         }
         yfade = -1240;
         audio_stop_all();
+        audio_play_sound(snd_transition,1,false);
     }
 }

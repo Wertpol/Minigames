@@ -277,6 +277,7 @@ if (countdownneeded) {
     part_emitter_stream(global.prt_snow_s, global.prt_snow_e, global.prt_snow_t, 0);
     room_goto(rom_menu);
 }
+audio_stop_all();
 </string>
           </argument>
         </arguments>

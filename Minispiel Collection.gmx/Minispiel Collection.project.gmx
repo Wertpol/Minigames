@@ -18,6 +18,12 @@
       <sound>sound\snd_m6_good</sound>
       <sound>sound\snd_m6_bad</sound>
     </sounds>
+    <sounds name="grp_m2">
+      <sound>sound\snd_m2_music</sound>
+      <sound>sound\snd_m2_rasenm_her</sound>
+      <sound>sound\snd_m2_crash</sound>
+      <sound>sound\snd_m2_getItem</sound>
+    </sounds>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_wall</sprite>
@@ -112,7 +118,7 @@
       <sprite>sprites\spr_m6_wuascht</sprite>
       <sprite>sprites\spr_m6_nomore</sprite>
     </sprites>
-    <sprite>sprites\scheiss_sarah_thiery</sprite>
+    <sprite>sprites\spr_von_irgendwas</sprite>
     <sprite>sprites\spr_menu_start</sprite>
     <sprite>sprites\spr_menu_rounds</sprite>
     <sprite>sprites\spr_menu_settings</sprite>

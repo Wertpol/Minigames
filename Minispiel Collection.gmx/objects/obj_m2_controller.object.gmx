@@ -29,6 +29,9 @@
 
 instance_create(random(room_width),random(room_height),obj_m2_p1);
 instance_create(random(room_width),random(room_height),obj_m2_p2);
+
+audio_play_sound(snd_m2_music,2,true);
+audio_play_sound(snd_m2_rasenm_her,2,true);
 </string>
           </argument>
         </arguments>

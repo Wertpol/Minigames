@@ -286,12 +286,14 @@ if(randomCount2 == 250){
             with (obj_m2_controller) {
                 alarm[1] = 60;
             }
+            audio_play_sound(snd_m2_crash,1,false);
             instance_destroy();
         }
     } else {
         with (obj_m2_controller) {
             alarm[1] = 60;
         }
+        audio_play_sound(snd_m2_crash,1,false);
         instance_destroy();
     }
 } else {
@@ -300,12 +302,14 @@ if(randomCount2 == 250){
             with (obj_m2_controller) {
                 alarm[2] = 60;
             }
+            audio_play_sound(snd_m2_crash,1,false);
             instance_destroy();
         }
     } else {
         with (obj_m2_controller) {
             alarm[2] = 60;
         }
+        audio_play_sound(snd_m2_crash,1,false);
         instance_destroy();
     }
 } 
